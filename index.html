@@ -5,17 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TemarioPE</title>
     <style>
-        body{
+        body {
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
-        th, td{
+        th, td {
             padding: 5px 10px;
+            border: 1px solid #ccc;
         }
-        table, table *{
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             border-radius: 20px;
+            overflow: hidden;
         }
         tr:hover {
-            background-color: #f9f9f9;
+            background-color: #e0e0e0;
+            transition: background-color 0.3s ease;
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        th, td {
+            animation: fadeIn 0.5s ease, slideIn 0.5s ease;
         }
     </style>
 </head>
