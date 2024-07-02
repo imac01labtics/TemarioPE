@@ -4,9 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TemarioPE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@600&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Saira+Condensed:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/stix-two-math" rel="stylesheet">
     <style>
         body {
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        i{
+            font-size: 1.15em;
+            font-weight: 500;
+            font-family: 'STIX Two Math', sans-serif;
+        }
+        math *{
+            font-weight: 500;
+            font-family: 'STIX Two Math', sans-serif;
         }
         th, td {
             padding: 5px 10px;
@@ -326,10 +339,7 @@
                     La varianza de una variable aleatoria discreta es una medida de la dispersión de sus valores alrededor del valor esperado. Se define como la esperanza del cuadrado de la diferencia entre la variable y su valor esperado: <br>
                     <math>
                         <mrow>
-                          <mo>Var</mo>
-                          <mo>(</mo>
-                          <mi>X</mi>
-                          <mo>)</mo>
+                          <mo>Var(X)</mo>
                           <mo>=</mo>
                           <munder>
                             <mo>∑</mo>
@@ -370,10 +380,7 @@
                           <mo>=</mo>
                           <msqrt>
                             <mrow>
-                              <mo>Var</mo>
-                              <mo>(</mo>
-                              <mi>X</mi>
-                              <mo>)</mo>
+                              <mo>Var(X)</mo>
                             </mrow>
                           </msqrt>
                         </mrow>
