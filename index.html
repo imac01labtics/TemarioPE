@@ -284,37 +284,342 @@
             <tr>
                 <td>3.1 Variables aleatorias discretas</td>
                 <td>
-                    
+                    Una variable aleatoria es un medio para describir los resultados del espacio muestral empleando números, es decir, es una función1 que asigna valores numéricos a cada uno de los eventos del espacio muestral. Puede ser discreta o continua y se acostumbra representarla con una <i>X</i>. 
                 </td>
             </tr>
             <tr>
-                <td></td>
+                <td>3.1.1 Distribución de Probabilidad en Forma General</td>
                 <td>
-                    
+                    La distribución de probabilidad de una variable aleatoria discreta es una función que asigna a cada posible valor de la variable su probabilidad correspondiente. Formalmente, si <i>X</i> es una variable aleatoria discreta, entonces su distribución de probabilidad se define como: <br>
+                    <math>
+                        <mrow>
+                            <mi>P(X = x<sub>i</sub>)</mi>
+                            <mo>=</mo>
+                            <mi>p<sub>i</sub></mi>
+                        </mrow>
+                    </math>
+                    <br>
+                    Donde: <br>
+                     <i>x<sub>i</sub></i> es un valor posible de <i>X</i> <br>
+                    <i>p<sub>i</sub></i>  es la probabilidad de que <i>X</i> tome el valor <i>x<sub>i</sub></i>
                 </td>
             </tr>
             <tr>
-                <td></td>
+                <td>3.1.2 Valor Esperado</td>
                 <td>
-                    
+                    El valor esperado, o esperanza matemática, de una variable aleatoria discreta es una medida del centro de su distribución de probabilidad. Se define como la suma ponderada de todos los posibles valores de la variable, donde los pesos son las probabilidades de cada valor. Formalmente: <br>
+                    <math>
+                        <mrow>
+                            <mi>E(X)</mi>
+                            <mo>=</mo>
+                            <mi>∑ x<sub>i</sub> p<sub>i</sub></mi>
+                        </mrow>
+                    </math> <br>
+                    Donde: <br>
+                     <i>x<sub>i</sub></i> son los valores posibles de <i>X</i> <br>
+                     <i>p<sub>i</sub></i> son las probabilidades correspondientes </i>
                 </td>
             </tr>
             <tr>
-                <td></td>
+                <td>3.1.3 Varianza y Desviación Estándar</td>
                 <td>
-                    
+                    La varianza de una variable aleatoria discreta es una medida de la dispersión de sus valores alrededor del valor esperado. Se define como la esperanza del cuadrado de la diferencia entre la variable y su valor esperado: <br>
+                    <math>
+                        <mrow>
+                          <mo>Var</mo>
+                          <mo>(</mo>
+                          <mi>X</mi>
+                          <mo>)</mo>
+                          <mo>=</mo>
+                          <munder>
+                            <mo>∑</mo>
+                            <mrow>
+                              <mi>i</mi>
+                            </mrow>
+                          </munder>
+                          <mo>(</mo>
+                          <msup>
+                            <mi>x</mi>
+                            <mi>i</mi>
+                          </msup>
+                          <mo>-</mo>
+                          <mi>E</mi>
+                          <mo>(</mo>
+                          <mi>X</mi>
+                          <mo>)</mo>
+                          <msup>
+                            <mo>)</mo>
+                            <mn>2</mn>
+                          </msup>
+                          <mi>p</mi>
+                          <mo>(</mo>
+                          <msub>
+                            <mi>x</mi>
+                            <mi>i</mi>
+                          </msub>
+                          <mo>)</mo>
+                        </mrow>
+                    </math><br>
+                    La desviación estándar es la raíz cuadrada de la varianza y proporciona una medida de dispersión en las mismas unidades que la variable original: <br>
+                    <math>
+                        <mrow>
+                          <mo>σ</mo>
+                          <sub>
+                            <mi>X</mi>
+                          </sub>
+                          <mo>=</mo>
+                          <msqrt>
+                            <mrow>
+                              <mo>Var</mo>
+                              <mo>(</mo>
+                              <mi>X</mi>
+                              <mo>)</mo>
+                            </mrow>
+                          </msqrt>
+                        </mrow>
+                    </math>
                 </td>
             </tr>
             <tr>
-                <td></td>
+                <td>3.1.4 Función de Distribución Acumulada (FDA)</td>
                 <td>
-                    
+                    La función de distribución acumulada (FDA) de una variable aleatoria discreta <i>X</i> es una función que da la probabilidad de que <i>X</i> tome un valor menor o igual a un valor dado <i>x</i>. Se define como: <br>
+                    <math>
+                        <mrow>
+                          <mi>F</mi>
+                          <sub>
+                            <mi>X</mi>
+                          </sub>
+                          <mo>(</mo>
+                          <mi>x</mi>
+                          <mo>)</mo>
+                          <mo>=</mo>
+                          <mi>P</mi>
+                          <mo>(</mo>
+                          <mi>X</mi>
+                          <mo>≤</mo>
+                          <mi>x</mi>
+                          <mo>)</mo>
+                          <mo>=</mo>
+                          <munder>
+                            <mo>∑</mo>
+                            <mrow>
+                              <msub>
+                                <mi>x</mi>
+                                <mi>i</mi>
+                              </msub>
+                              <mo>≤</mo>
+                              <mi>x</mi>
+                            </mrow>
+                          </munder>
+                          <mi>P</mi>
+                          <mo>(</mo>
+                          <mi>X</mi>
+                          <mo>=</mo>
+                          <msub>
+                            <mi>x</mi>
+                            <mi>i</mi>
+                          </msub>
+                          <mo>)</mo>
+                        </mrow>
+                      </math>
                 </td>
             </tr>
             <tr>
-                <td></td>
+                <td>3.2 Variables Aleatorias Continuas</td>
                 <td>
-                    
+                    Una variable aleatoria continua puede tomar cualquier valor dentro de un intervalo de la recta real. Estas variables se describen mediante funciones de densidad de probabilidad en lugar de funciones de probabilidad. <br>
+                </td>
+            </tr>
+            <tr>
+                <td>3.2.1 Distribución de Probabilidad en Forma General</td>
+                <td>
+                    La distribución de probabilidad de una variable aleatoria continua se describe mediante una función de densidad de probabilidad (fdp), denotada como <i>fX(x) </i>. <br>
+                    Las propiedades principales de la fdp son: <br>
+                    <i>fX(x) ≥ 0</i> para todo <i>x</i>. <br>
+                    La integral de <i>fX(x)</i> sobre todo el espacio es igual a 1: <br>
+                    <math>
+                        <mrow>
+                          <msubsup>
+                            <mo>∫</mo>
+                            <mo>-∞</mo>
+                            <mo>∞</mo>
+                          </msubsup>
+                          <mi>f</mi>
+                          <sub>
+                            <mi>X</mi>
+                          </sub>
+                          <mo>(</mo>
+                          <mi>x</mi>
+                          <mo>)</mo>
+                          <mi>d</mi>
+                          <mi>x</mi>
+                          <mo>=</mo>
+                          <mn>1</mn>
+                        </mrow>
+                      </math>
+                </td>
+            </tr>
+            <tr>
+                <td>3.2.2 Valor Esperado</td>
+                <td>
+                    El valor esperado (esperanza matemática) de una variable aleatoria continua <i>X</i> se calcula como: <br>
+                    <math>
+                        <mrow>
+                          <mi>E</mi>
+                          <mo>(</mo>
+                          <mi>X</mi>
+                          <mo>)</mo>
+                          <mo>=</mo>
+                          <msubsup>
+                            <mo>∫</mo>
+                            <mo>-∞</mo>
+                            <mo>∞</mo>
+                          </msubsup>
+                          <mi>x</mi>
+                          <mi>f</mi>
+                          <sub>
+                            <mi>X</mi>
+                          </sub>
+                          <mo>(</mo>
+                          <mi>x</mi>
+                          <mo>)</mo>
+                          <mi>d</mi>
+                          <mi>x</mi>
+                        </mrow>
+                      </math> <br>
+                </td>
+            </tr>
+            </tr>
+            <tr>
+                <td>3.2.3 Varianza y Desviación Estándar</td>
+                <td>
+                    La varianza de una variable aleatoria continua <i>X</i> se define como: <br>
+                    <math>
+                        <mrow>
+                          <mo>Var</mo>
+                          <mo>(</mo>
+                          <mi>X</mi>
+                          <mo>)</mo>
+                          <mo>=</mo>
+                          <msubsup>
+                            <mo>∫</mo>
+                            <mo>-∞</mo>
+                            <mo>∞</mo>
+                          </msubsup>
+                          <mo>(</mo>
+                          <mi>x</mi>
+                          <mo>-</mo>
+                          <mi>E</mi>
+                          <mo>(</mo>
+                          <mi>X</mi>
+                          <mo>)</mo>
+                          <msup>
+                            <mo>)</mo>
+                            <mn>2</mn>
+                          </msup>
+                          <mi>f</mi>
+                          <sub>
+                            <mi>X</mi>
+                          </sub>
+                          <mo>(</mo>
+                          <mi>x</mi>
+                          <mo>)</mo>
+                          <mi>d</mi>
+                          <mi>x</mi>
+                        </mrow>
+                    </math> <br>
+                    La desviación estándar es la raíz cuadrada de la varianza: <br>
+                    <math>
+                    <mrow>
+                        <mo>σ</mo>
+                        <sub>
+                        <mi>X</mi>
+                        </sub>
+                        <mo>=</mo>
+                        <msqrt>
+                        <mrow>
+                            <mo>Var</mo>
+                            <mo>(</mo>
+                            <mi>X</mi>
+                            <mo>)</mo>
+                        </mrow>
+                        </msqrt>
+                    </mrow>
+                    </math> <br>
+                </td>
+            </tr>
+            <tr>
+                <td>3.2.4 Función de Distribución Acumulada (FDA)</td>
+                <td>
+                    La función de distribución acumulada (FDA) de una variable aleatoria continua <i>X</i> se define como: <br>
+                    <math>
+                        <mrow>
+                          <mi>F</mi>
+                          <sub>
+                            <mi>X</mi>
+                          </sub>
+                          <mo>(</mo>
+                          <mi>x</mi>
+                          <mo>)</mo>
+                          <mo>=</mo>
+                          <mi>P</mi>
+                          <mo>(</mo>
+                          <mi>X</mi>
+                          <mo>≤</mo>
+                          <mi>x</mi>
+                          <mo>)</mo>
+                          <mo>=</mo>
+                          <msubsup>
+                            <mo>∫</mo>
+                            <mo>-∞</mo>
+                            <mi>x</mi>
+                          </msubsup>
+                          <mi>f</mi>
+                          <sub>
+                            <mi>X</mi>
+                          </sub>
+                          <mo>(</mo>
+                          <mi>t</mi>
+                          <mo>)</mo>
+                          <mi>d</mi>
+                          <mi>t</mi>
+                        </mrow>
+                    </math>                      
+                </td>
+            </tr>
+            </tr>
+            <tr>
+                <td>3.2.5 Cálculos de Probabilidad</td>
+                <td>
+                    Para una variable aleatoria continua <i>X</i>, la probabilidad de que <i>X</i> tome un valor dentro de un intervalo <i>[a,b]</i> se calcula como la integral de la función de densidad de probabilidad sobre ese intervalo: <br>
+                    <math>
+                        <mrow>
+                          <mi>P</mi>
+                          <mo>(</mo>
+                          <mi>a</mi>
+                          <mo>≤</mo>
+                          <mi>X</mi>
+                          <mo>≤</mo>
+                          <mi>b</mi>
+                          <mo>)</mo>
+                          <mo>=</mo>
+                          <msubsup>
+                            <mo>∫</mo>
+                            <mi>a</mi>
+                            <mi>b</mi>
+                          </msubsup>
+                          <mi>f</mi>
+                          <sub>
+                            <mi>X</mi>
+                          </sub>
+                          <mo>(</mo>
+                          <mi>x</mi>
+                          <mo>)</mo>
+                          <mi>d</mi>
+                          <mi>x</mi>
+                        </mrow>
+                    </math>
                 </td>
             </tr>
         </table>
