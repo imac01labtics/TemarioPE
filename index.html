@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TemarioPE</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@600&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Saira+Condensed:wght@500&display=swap" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/stix-two-math" rel="stylesheet">
+    <!-- MathJax permite renderizar formato LaTeX -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- Incluir la fuente de KaTeX -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div>
         <table style="width: 90vw; margin: auto;">
 
             <!-- #####################################  TEMA 1 ##################################### -->
-            
+
             <tr>
                 <th colspan="2">
                     <h3>Tema 1: Estadística descriptiva</h3>
@@ -28,19 +31,25 @@
             <tr>
                 <td>1.1 Conceptos básicos de estadística</td>
                 <td>
-                    Definición: La estadística es la disciplina que se encarga de recopilar, organizar, analizar e interpretar datos para la toma de decisiones. <br>
-                    Teoría de decisión: Método estadístico para tomar decisiones considerando la incertidumbre y las probabilidades. <br>
+                    Definición: La estadística es la disciplina que se encarga de recopilar, organizar, analizar e
+                    interpretar datos para la toma de decisiones. <br>
+                    Teoría de decisión: Método estadístico para tomar decisiones considerando la incertidumbre y las
+                    probabilidades. <br>
                     Población: Conjunto completo de elementos o individuos sujetos a estudio. <br>
-                    Muestra aleatoria: Subconjunto representativo de la población, seleccionado de manera que cada individuo tenga igual probabilidad de ser incluido. <br>
+                    Muestra aleatoria: Subconjunto representativo de la población, seleccionado de manera que cada
+                    individuo tenga igual probabilidad de ser incluido. <br>
                     Parámetros aleatorios: Valores desconocidos que describen características de una población. <br>
                 </td>
             </tr>
             <tr>
                 <td>1.2 Descripción de datos</td>
                 <td>
-                    Datos agrupados y no agrupados: Los datos no agrupados son aquellos que se presentan individualmente, mientras que los datos agrupados están organizados en categorías o intervalos. <br>
-                    Frecuencia de clase: La frecuencia de clase es el número de veces que se observa un valor dentro de un intervalo particular en un conjunto de datos agrupados. <br>
-                    Frecuencia relativa: La frecuencia relativa es la proporción o porcentaje de veces que ocurre un valor dentro de un conjunto de datos. <br>
+                    Datos agrupados y no agrupados: Los datos no agrupados son aquellos que se presentan
+                    individualmente, mientras que los datos agrupados están organizados en categorías o intervalos. <br>
+                    Frecuencia de clase: La frecuencia de clase es el número de veces que se observa un valor dentro de
+                    un intervalo particular en un conjunto de datos agrupados. <br>
+                    Frecuencia relativa: La frecuencia relativa es la proporción o porcentaje de veces que ocurre un
+                    valor dentro de un conjunto de datos. <br>
                     Punto medio: El punto medio es el valor medio de un intervalo en datos agrupados. <br>
                     Límites: Los límites son los valores extremos de un intervalo en datos agrupados. <br>
                 </td>
@@ -48,51 +57,77 @@
             <tr>
                 <td>1.3 Medidas de tendencia central</td>
                 <td>
-                    Media aritmética: Es el promedio comúnmente utilizado, obtenido sumando todos los valores y dividiendo esa suma por la cantidad de valores. <br>
-                    Media geométrica: Es el promedio obtenido multiplicando todos los valores y luego tomando la raíz n-ésima del producto, donde n es el número total de valores. <br>
-                    Media ponderada: Es un promedio donde cada valor tiene un peso asignado. Se calcula multiplicando cada valor por su respectivo peso, sumando estos productos y dividiendo por la suma de los pesos. <br>
+                    Media aritmética: Es el promedio comúnmente utilizado, obtenido sumando todos los valores y
+                    dividiendo esa suma por la cantidad de valores. <br>
+                    Media geométrica: Es el promedio obtenido multiplicando todos los valores y luego tomando la raíz
+                    n-ésima del producto, donde n es el número total de valores. <br>
+                    Media ponderada: Es un promedio donde cada valor tiene un peso asignado. Se calcula multiplicando
+                    cada valor por su respectivo peso, sumando estos productos y dividiendo por la suma de los pesos.
+                    <br>
                     Mediana: Valor central de un conjunto de datos ordenados. <br>
                     Moda: Valor más frecuente en un conjunto de datos. <br>
                     Medidas de dispersión: Indican la variabilidad de los datos respecto a una medida central. <br>
-                    Varianza: Es una medida de dispersión que indica cuánto se alejan los valores de una serie de datos de su media. Se calcula como el promedio de las diferencias al cuadrado entre cada dato y la media. <br>
-                    Desviación estándar: Es la raíz cuadrada de la varianza. Proporciona una medida de dispersión similar a la varianza, pero en la misma escala que los datos originales. <br>
-                    Desviación media: Es la media de las diferencias absolutas entre cada dato y la media. Proporciona una medida de dispersión que considera tanto los valores por encima como por debajo de la media. <br>
-                    Desviación mediana: Es la mediana de las diferencias absolutas entre cada dato y la mediana. Es menos sensible a valores extremos que la desviación media, lo que la hace útil en conjuntos de datos con valores atípicos. <br>
-                    Rango: Es la diferencia entre el valor máximo y el valor mínimo en un conjunto de datos. Es una medida simple de dispersión que puede proporcionar una idea general de la amplitud de los datos. <br>
+                    Varianza: Es una medida de dispersión que indica cuánto se alejan los valores de una serie de datos
+                    de su media. Se calcula como el promedio de las diferencias al cuadrado entre cada dato y la media.
+                    <br>
+                    Desviación estándar: Es la raíz cuadrada de la varianza. Proporciona una medida de dispersión
+                    similar a la varianza, pero en la misma escala que los datos originales. <br>
+                    Desviación media: Es la media de las diferencias absolutas entre cada dato y la media. Proporciona
+                    una medida de dispersión que considera tanto los valores por encima como por debajo de la media.
+                    <br>
+                    Desviación mediana: Es la mediana de las diferencias absolutas entre cada dato y la mediana. Es
+                    menos sensible a valores extremos que la desviación media, lo que la hace útil en conjuntos de datos
+                    con valores atípicos. <br>
+                    Rango: Es la diferencia entre el valor máximo y el valor mínimo en un conjunto de datos. Es una
+                    medida simple de dispersión que puede proporcionar una idea general de la amplitud de los datos.
+                    <br>
                 </td>
             </tr>
             <tr>
                 <td>1.4 Parámetros para datos agrupados</td>
                 <td>
-                    Este tema se centra en los métodos para calcular parámetros estadísticos, como la media y la varianza, cuando los datos están agrupados en intervalos en lugar de ser valores individuales. Esto es importante porque muchos conjuntos de datos son demasiado grandes para analizar cada valor individualmente, por lo que se agrupan en intervalos para facilitar su análisis.
+                    Este tema se centra en los métodos para calcular parámetros estadísticos, como la media y la
+                    varianza, cuando los datos están agrupados en intervalos en lugar de ser valores individuales. Esto
+                    es importante porque muchos conjuntos de datos son demasiado grandes para analizar cada valor
+                    individualmente, por lo que se agrupan en intervalos para facilitar su análisis.
                 </td>
             </tr>
             <tr>
                 <td>1.5 Distribución de frecuencias</td>
                 <td>
-                    Se aborda cómo organizar los datos en categorías o intervalos y contar cuántas observaciones caen en cada categoría. La distribución de frecuencias proporciona una forma clara de comprender la distribución de los datos y es fundamental para calcular estadísticas descriptivas y hacer inferencias sobre la población a partir de una muestra.
+                    Se aborda cómo organizar los datos en categorías o intervalos y contar cuántas observaciones caen en
+                    cada categoría. La distribución de frecuencias proporciona una forma clara de comprender la
+                    distribución de los datos y es fundamental para calcular estadísticas descriptivas y hacer
+                    inferencias sobre la población a partir de una muestra.
                 </td>
             </tr>
             <tr>
                 <td>1.6 Técnicas de agrupación de datos</td>
                 <td>
-                    Se exploran los métodos para agrupar datos en intervalos o categorías de manera significativa y útil. Esto puede incluir el uso de reglas específicas para determinar el ancho de los intervalos y garantizar que la agrupación refleje adecuadamente la distribución de los datos.
+                    Se exploran los métodos para agrupar datos en intervalos o categorías de manera significativa y
+                    útil. Esto puede incluir el uso de reglas específicas para determinar el ancho de los intervalos y
+                    garantizar que la agrupación refleje adecuadamente la distribución de los datos.
                 </td>
             </tr>
             <tr>
                 <td>1.7 Técnicas de muestreo</td>
-                <td>En el desarrollo de este tema se examinan los diferentes métodos para seleccionar una muestra representativa de una población más grande. Estas técnicas son cruciales para garantizar que la muestra captura adecuadamente la variabilidad y características de la población, lo que permite hacer inferencias precisas sobre la población a partir de la muestra seleccionada.</td>
+                <td>En el desarrollo de este tema se examinan los diferentes métodos para seleccionar una muestra
+                    representativa de una población más grande. Estas técnicas son cruciales para garantizar que la
+                    muestra captura adecuadamente la variabilidad y características de la población, lo que permite
+                    hacer inferencias precisas sobre la población a partir de la muestra seleccionada.</td>
             </tr>
             <tr>
                 <td>1.8 Histogramas</td>
                 <td>
-                    Parecidos a los gráficos de barras, estos muestran la distribución de frecuencias de un conjunto de datos. <br>
-                    Ayudan a visualizar la forma y dispersión de los datos, identificando patrones y tendencias. Son útiles para datos agrupados y continuos.
+                    Parecidos a los gráficos de barras, estos muestran la distribución de frecuencias de un conjunto de
+                    datos. <br>
+                    Ayudan a visualizar la forma y dispersión de los datos, identificando patrones y tendencias. Son
+                    útiles para datos agrupados y continuos.
                 </td>
             </tr>
 
             <!-- #####################################  TEMA 2 ##################################### -->
-            
+
             <tr>
                 <th colspan="2">
                     <h3>Tema 2: Fundamentos de la Teoría de Probabilidad</h3>
@@ -105,13 +140,19 @@
             <tr>
                 <td>2.1 Técnicas de Conteo</td>
                 <td>
-                    Las técnicas de conteo son herramientas fundamentales en probabilidad y estadística que nos permiten calcular el número de maneras en las que puede ocurrir un evento o una serie de eventos. Estas técnicas son esenciales para determinar las probabilidades en diferentes situaciones.
+                    Las técnicas de conteo son herramientas fundamentales en probabilidad y estadística que nos permiten
+                    calcular el número de maneras en las que puede ocurrir un evento o una serie de eventos. Estas
+                    técnicas son esenciales para determinar las probabilidades en diferentes situaciones.
                 </td>
             </tr>
             <tr>
                 <td>2.1.1 Principio aditivo</td>
                 <td>
-                    El principio aditivo se utiliza cuando se desea contar el número total de maneras en las que puede ocurrir uno de varios eventos mutuamente excluyentes. Si un evento A puede ocurrir de <i>n<sub>A</sub></i> maneras y un evento B puede ocurrir de <i>n<sub>B</sub></i> maneras, y los dos eventos no pueden ocurrir simultáneamente, entonces el número total de maneras en las que puede ocurrir A o B es:
+                    El principio aditivo se utiliza cuando se desea contar el número total de maneras en las que puede
+                    ocurrir uno de varios eventos mutuamente excluyentes. Si un evento A puede ocurrir de
+                    <i>n<sub>A</sub></i> maneras y un evento B puede ocurrir de <i>n<sub>B</sub></i> maneras, y los dos
+                    eventos no pueden ocurrir simultáneamente, entonces el número total de maneras en las que puede
+                    ocurrir A o B es:
                     <br>
                     <i>n<sub>A</sub> + n<sub>B</sub> </i>
                 </td>
@@ -119,7 +160,10 @@
             <tr>
                 <td>2.1.2 Principio Multiplicativo</td>
                 <td>
-                    El principio multiplicativo se aplica cuando se desea contar el número total de maneras en las que puede ocurrir una serie de eventos independientes. Si un evento A puede ocurrir de n<sub>A</sub> maneras y un evento B puede ocurrir de n<sub>B</sub> maneras, entonces el número total de maneras en las que pueden ocurrir ambos eventos es:
+                    El principio multiplicativo se aplica cuando se desea contar el número total de maneras en las que
+                    puede ocurrir una serie de eventos independientes. Si un evento A puede ocurrir de n<sub>A</sub>
+                    maneras y un evento B puede ocurrir de n<sub>B</sub> maneras, entonces el número total de maneras en
+                    las que pueden ocurrir ambos eventos es:
                     <br>
                     <i>n<sub>A</sub> ⋅ n<sub>B</sub> </i>
                 </td>
@@ -127,7 +171,9 @@
             <tr>
                 <td>2.1.3 Notación Factorial</td>
                 <td>
-                    La notación factorial se utiliza para contar el número de maneras en las que se pueden ordenar <i>n</i> objetos distintos. El factorial de un número <i>n</i>, denotado como <i>n!</i>, se define como:
+                    La notación factorial se utiliza para contar el número de maneras en las que se pueden ordenar
+                    <i>n</i> objetos distintos. El factorial de un número <i>n</i>, denotado como <i>n!</i>, se define
+                    como:
                     <br>
                     <i>n! = n ⋅ (n - 1) ⋅ (n - 2) ... 3 ⋅ 2 ⋅ 1</i>
                 </td>
@@ -135,7 +181,10 @@
             <tr>
                 <td>2.1.4 Permutaciones</td>
                 <td>
-                    Las permutaciones se refieren al número de maneras de ordenar un conjunto de objetos. Si se tienen <i>n</i> objetos y se desean ordenar todos, el número de permutaciones es <i>n!</i>. Si se desea ordenar solo <i>k</i> objetos de un conjunto de <i>n</i>, el número de permutaciones se calcula como:
+                    Las permutaciones se refieren al número de maneras de ordenar un conjunto de objetos. Si se tienen
+                    <i>n</i> objetos y se desean ordenar todos, el número de permutaciones es <i>n!</i>. Si se desea
+                    ordenar solo <i>k</i> objetos de un conjunto de <i>n</i>, el número de permutaciones se calcula
+                    como:
                     <br>
                     <math>
                         <mrow>
@@ -152,7 +201,8 @@
             <tr>
                 <td>2.1.5 Combinaciones</td>
                 <td>
-                    Las combinaciones se refieren al número de maneras de seleccionar <i>k</i> objetos de un conjunto de <i>n</i> sin importar el orden. El número de combinaciones se calcula como:
+                    Las combinaciones se refieren al número de maneras de seleccionar <i>k</i> objetos de un conjunto de
+                    <i>n</i> sin importar el orden. El número de combinaciones se calcula como:
                     <br>
                     <math>
                         <mrow>
@@ -160,10 +210,14 @@
                             <mo>=</mo>
                             <mtable>
                                 <mtr>
-                                <mtd><mi>n</mi></mtd>
+                                    <mtd>
+                                        <mi>n</mi>
+                                    </mtd>
                                 </mtr>
                                 <mtr>
-                                <mtd><mi>k</mi></mtd>
+                                    <mtd>
+                                        <mi>k</mi>
+                                    </mtd>
                                 </mtr>
                             </mtable>
                             <mo>=</mo>
@@ -178,20 +232,25 @@
             <tr>
                 <td>2.1.6 Diagrama de Árbol</td>
                 <td>
-                    Un diagrama de árbol es una representación gráfica que muestra todas las posibles combinaciones o resultados de una serie de eventos. Se utiliza para visualizar y calcular las probabilidades y posibles resultados en escenarios con múltiples etapas.
+                    Un diagrama de árbol es una representación gráfica que muestra todas las posibles combinaciones o
+                    resultados de una serie de eventos. Se utiliza para visualizar y calcular las probabilidades y
+                    posibles resultados en escenarios con múltiples etapas.
                 </td>
             </tr>
             <tr>
                 <td>2.1.7 Teorema del Binomio</td>
                 <td>
-                    El teorema del binomio proporciona una fórmula para expandir potencias de binomios. Para cualquier número real <i>a</i> y <i>b</i>, y un número entero no negativo <i>n</i>.
+                    El teorema del binomio proporciona una fórmula para expandir potencias de binomios. Para cualquier
+                    número real <i>a</i> y <i>b</i>, y un número entero no negativo <i>n</i>.
                     <!--, el teorema del binomio se expresa como:-->
                 </td>
             </tr>
             <tr>
                 <td>2.2 Teoría elemental de probabilidad</td>
                 <td>
-                    La teoría elemental de probabilidad establece los principios básicos para calcular probabilidades, incluyendo los axiomas de Kolmogorov que definen propiedades esenciales como no negatividad, certeza y aditividad de las probabilidades.
+                    La teoría elemental de probabilidad establece los principios básicos para calcular probabilidades,
+                    incluyendo los axiomas de Kolmogorov que definen propiedades esenciales como no negatividad, certeza
+                    y aditividad de las probabilidades.
                 </td>
             </tr>
             <tr>
@@ -209,13 +268,17 @@
             <tr>
                 <td>2.4 Probabilidad con Técnicas de Conteo</td>
                 <td>
-                    Utiliza combinaciones y permutaciones para contar el número de formas en que pueden ocurrir eventos, aplicando axiomas y teoremas como el de la probabilidad total y el de Bayes para calcular probabilidades.
+                    Utiliza combinaciones y permutaciones para contar el número de formas en que pueden ocurrir eventos,
+                    aplicando axiomas y teoremas como el de la probabilidad total y el de Bayes para calcular
+                    probabilidades.
                 </td>
             </tr>
             <tr>
                 <td>2.5 Probabilidad Condicional</td>
                 <td>
-                    La probabilidad condicional P(A|B) mide la probabilidad de que ocurra el evento <i>A</i> dado que <i>B</i> ha ocurrido. Los eventos pueden ser dependientes (la ocurrencia de uno afecta al otro) o independientes (la ocurrencia de uno no afecta al otro).
+                    La probabilidad condicional P(A|B) mide la probabilidad de que ocurra el evento <i>A</i> dado que
+                    <i>B</i> ha ocurrido. Los eventos pueden ser dependientes (la ocurrencia de uno afecta al otro) o
+                    independientes (la ocurrencia de uno no afecta al otro).
                 </td>
             </tr>
             <tr>
@@ -231,7 +294,8 @@
             <tr>
                 <td>2.7 Eventos Independientes: Regla de Bayes</td>
                 <td>
-                    La regla de Bayes permite actualizar la probabilidad de un evento basado en nueva información, calculando P(B<sub>i</sub>|A) a partir de P(A|B<sub>i</sub>) y P(B<sub>i</sub>) .
+                    La regla de Bayes permite actualizar la probabilidad de un evento basado en nueva información,
+                    calculando P(B<sub>i</sub>|A) a partir de P(A|B<sub>i</sub>) y P(B<sub>i</sub>) .
                 </td>
             </tr>
 
@@ -249,13 +313,17 @@
             <tr>
                 <td>3.1 Variables aleatorias discretas</td>
                 <td>
-                    Una variable aleatoria es un medio para describir los resultados del espacio muestral empleando números, es decir, es una función1 que asigna valores numéricos a cada uno de los eventos del espacio muestral. Puede ser discreta o continua y se acostumbra representarla con una <i>X</i>. 
+                    Una variable aleatoria es un medio para describir los resultados del espacio muestral empleando
+                    números, es decir, es una función1 que asigna valores numéricos a cada uno de los eventos del
+                    espacio muestral. Puede ser discreta o continua y se acostumbra representarla con una <i>X</i>.
                 </td>
             </tr>
             <tr>
                 <td>3.1.1 Distribución de Probabilidad en Forma General</td>
                 <td>
-                    La distribución de probabilidad de una variable aleatoria discreta es una función que asigna a cada posible valor de la variable su probabilidad correspondiente. Formalmente, si <i>X</i> es una variable aleatoria discreta, entonces su distribución de probabilidad se define como: <br>
+                    La distribución de probabilidad de una variable aleatoria discreta es una función que asigna a cada
+                    posible valor de la variable su probabilidad correspondiente. Formalmente, si <i>X</i> es una
+                    variable aleatoria discreta, entonces su distribución de probabilidad se define como: <br>
                     <math>
                         <mrow>
                             <mi>P(X = x<sub>i</sub>)</mi>
@@ -265,14 +333,16 @@
                     </math>
                     <br>
                     Donde: <br>
-                     <i>x<sub>i</sub></i> es un valor posible de <i>X</i> <br>
-                    <i>p<sub>i</sub></i>  es la probabilidad de que <i>X</i> tome el valor <i>x<sub>i</sub></i>
+                    <i>x<sub>i</sub></i> es un valor posible de <i>X</i> <br>
+                    <i>p<sub>i</sub></i> es la probabilidad de que <i>X</i> tome el valor <i>x<sub>i</sub></i>
                 </td>
             </tr>
             <tr>
                 <td>3.1.2 Valor Esperado</td>
                 <td>
-                    El valor esperado, o esperanza matemática, de una variable aleatoria discreta es una medida del centro de su distribución de probabilidad. Se define como la suma ponderada de todos los posibles valores de la variable, donde los pesos son las probabilidades de cada valor. Formalmente: <br>
+                    El valor esperado, o esperanza matemática, de una variable aleatoria discreta es una medida del
+                    centro de su distribución de probabilidad. Se define como la suma ponderada de todos los posibles
+                    valores de la variable, donde los pesos son las probabilidades de cada valor. Formalmente: <br>
                     <math>
                         <mrow>
                             <mi>E(X)</mi>
@@ -281,57 +351,60 @@
                         </mrow>
                     </math> <br>
                     Donde: <br>
-                     <i>x<sub>i</sub></i> son los valores posibles de <i>X</i> <br>
-                     <i>p<sub>i</sub></i> son las probabilidades correspondientes </i>
+                    <i>x<sub>i</sub></i> son los valores posibles de <i>X</i> <br>
+                    <i>p<sub>i</sub></i> son las probabilidades correspondientes </i>
                 </td>
             </tr>
             <tr>
                 <td>3.1.3 Varianza y Desviación Estándar</td>
                 <td>
-                    La varianza de una variable aleatoria discreta es una medida de la dispersión de sus valores alrededor del valor esperado. Se define como la esperanza del cuadrado de la diferencia entre la variable y su valor esperado: <br>
+                    La varianza de una variable aleatoria discreta es una medida de la dispersión de sus valores
+                    alrededor del valor esperado. Se define como la esperanza del cuadrado de la diferencia entre la
+                    variable y su valor esperado: <br>
                     <math>
                         <mrow>
-                          <mo>Var(X)</mo>
-                          <mo>=</mo>
-                          <munder>
-                            <mo>∑</mo>
-                            <mrow>
-                              <mi>i</mi>
-                            </mrow>
-                          </munder>
-                          <mo>(</mo>
-                          <msup>
-                            <mi>x</mi>
-                            <mi>i</mi>
-                          </msup>
-                          <mo>-</mo>
-                          <mi>E</mi>
-                          <mo>(</mo>
-                          <mi>X</mi>
-                          <mo>)</mo>
-                          <msup>
+                            <mo>Var(X)</mo>
+                            <mo>=</mo>
+                            <munder>
+                                <mo>∑</mo>
+                                <mrow>
+                                    <mi>i</mi>
+                                </mrow>
+                            </munder>
+                            <mo>(</mo>
+                            <msup>
+                                <mi>x</mi>
+                                <mi>i</mi>
+                            </msup>
+                            <mo>-</mo>
+                            <mi>E</mi>
+                            <mo>(</mo>
+                            <mi>X</mi>
                             <mo>)</mo>
-                            <mn>2</mn>
-                          </msup>
-                          <mi>p</mi>
-                          <mo>(</mo>
-                          <msub>
-                            <mi>x</mi>
-                            <mi>i</mi>
-                          </msub>
-                          <mo>)</mo>
+                            <msup>
+                                <mo>)</mo>
+                                <mn>2</mn>
+                            </msup>
+                            <mi>p</mi>
+                            <mo>(</mo>
+                            <msub>
+                                <mi>x</mi>
+                                <mi>i</mi>
+                            </msub>
+                            <mo>)</mo>
                         </mrow>
                     </math><br>
-                    La desviación estándar es la raíz cuadrada de la varianza y proporciona una medida de dispersión en las mismas unidades que la variable original: <br>
+                    La desviación estándar es la raíz cuadrada de la varianza y proporciona una medida de dispersión en
+                    las mismas unidades que la variable original: <br>
                     <math>
                         <mrow>
-                          <mo>σ<sub>X</sub></mo>
-                          <mo>=</mo>
-                          <msqrt>
-                            <mrow>
-                              <mo>Var(X)</mo>
-                            </mrow>
-                          </msqrt>
+                            <mo>σ<sub>X</sub></mo>
+                            <mo>=</mo>
+                            <msqrt>
+                                <mrow>
+                                    <mo>Var(X)</mo>
+                                </mrow>
+                            </msqrt>
                         </mrow>
                     </math>
                 </td>
@@ -339,106 +412,112 @@
             <tr>
                 <td>3.1.4 Función de Distribución Acumulada (FDA)</td>
                 <td>
-                    La función de distribución acumulada (FDA) de una variable aleatoria discreta <i>X</i> es una función que da la probabilidad de que <i>X</i> tome un valor menor o igual a un valor dado <i>x</i>. Se define como: <br>
+                    La función de distribución acumulada (FDA) de una variable aleatoria discreta <i>X</i> es una
+                    función que da la probabilidad de que <i>X</i> tome un valor menor o igual a un valor dado <i>x</i>.
+                    Se define como: <br>
                     <math>
                         <mrow>
-                          <mi>FX</mi>
-                          <mi>(x)</mi>
-                          <mo>=</mo>
-                          <mi>P</mi>
-                          <mo>(</mo>
-                          <mi>X</mi>
-                          <mo>≤</mo>
-                          <mi>x</mi>
-                          <mo>)</mo>
-                          <mo>=</mo>
-                          <munder>
-                            <mo>∑</mo>
-                            <mrow>
-                              <msub>
+                            <mi>FX</mi>
+                            <mi>(x)</mi>
+                            <mo>=</mo>
+                            <mi>P</mi>
+                            <mo>(</mo>
+                            <mi>X</mi>
+                            <mo>≤</mo>
+                            <mi>x</mi>
+                            <mo>)</mo>
+                            <mo>=</mo>
+                            <munder>
+                                <mo>∑</mo>
+                                <mrow>
+                                    <msub>
+                                        <mi>x</mi>
+                                        <mi>i</mi>
+                                    </msub>
+                                    <mo>≤</mo>
+                                    <mi>x</mi>
+                                </mrow>
+                            </munder>
+                            <mi>P</mi>
+                            <mo>(</mo>
+                            <mi>X</mi>
+                            <mo>=</mo>
+                            <msub>
                                 <mi>x</mi>
                                 <mi>i</mi>
-                              </msub>
-                              <mo>≤</mo>
-                              <mi>x</mi>
-                            </mrow>
-                          </munder>
-                          <mi>P</mi>
-                          <mo>(</mo>
-                          <mi>X</mi>
-                          <mo>=</mo>
-                          <msub>
-                            <mi>x</mi>
-                            <mi>i</mi>
-                          </msub>
-                          <mo>)</mo>
+                            </msub>
+                            <mo>)</mo>
                         </mrow>
-                      </math>
+                    </math>
                 </td>
             </tr>
             <tr>
                 <td>3.2 Variables Aleatorias Continuas</td>
                 <td>
-                    Una variable aleatoria continua puede tomar cualquier valor dentro de un intervalo de la recta real. Estas variables se describen mediante funciones de densidad de probabilidad en lugar de funciones de probabilidad. <br>
+                    Una variable aleatoria continua puede tomar cualquier valor dentro de un intervalo de la recta real.
+                    Estas variables se describen mediante funciones de densidad de probabilidad en lugar de funciones de
+                    probabilidad. <br>
                 </td>
             </tr>
             <tr>
                 <td>3.2.1 Distribución de Probabilidad en Forma General</td>
                 <td>
-                    La distribución de probabilidad de una variable aleatoria continua se describe mediante una función de densidad de probabilidad (fdp), denotada como <i>fX(x) </i>. <br>
+                    La distribución de probabilidad de una variable aleatoria continua se describe mediante una función
+                    de densidad de probabilidad (fdp), denotada como <i>fX(x) </i>. <br>
                     Las propiedades principales de la fdp son: <br>
                     <i>fX(x) ≥ 0</i> para todo <i>x</i>. <br>
                     La integral de <i>fX(x)</i> sobre todo el espacio es igual a 1: <br>
                     <math>
                         <mrow>
-                          <msubsup>
-                            <mo>∫</mo>
-                            <mo>-∞</mo>
-                            <mo>∞</mo>
-                          </msubsup>
-                          <mi>f</mi>
-                          <sub>
-                            <mi>X</mi>
-                          </sub>
-                          <mo>(</mo>
-                          <mi>x</mi>
-                          <mo>)</mo>
-                          <mi>d</mi>
-                          <mi>x</mi>
-                          <mo>=</mo>
-                          <mn>1</mn>
+                            <msubsup>
+                                <mo>∫</mo>
+                                <mo>-∞</mo>
+                                <mo>∞</mo>
+                            </msubsup>
+                            <mi>f</mi>
+                            <sub>
+                                <mi>X</mi>
+                            </sub>
+                            <mo>(</mo>
+                            <mi>x</mi>
+                            <mo>)</mo>
+                            <mi>d</mi>
+                            <mi>x</mi>
+                            <mo>=</mo>
+                            <mn>1</mn>
                         </mrow>
-                      </math>
+                    </math>
                 </td>
             </tr>
             <tr>
                 <td>3.2.2 Valor Esperado</td>
                 <td>
-                    El valor esperado (esperanza matemática) de una variable aleatoria continua <i>X</i> se calcula como: <br>
+                    El valor esperado (esperanza matemática) de una variable aleatoria continua <i>X</i> se calcula
+                    como: <br>
                     <math>
                         <mrow>
-                          <mi>E</mi>
-                          <mo>(</mo>
-                          <mi>X</mi>
-                          <mo>)</mo>
-                          <mo>=</mo>
-                          <msubsup>
-                            <mo>∫</mo>
-                            <mo>-∞</mo>
-                            <mo>∞</mo>
-                          </msubsup>
-                          <mi>x</mi>
-                          <mi>f</mi>
-                          <sub>
+                            <mi>E</mi>
+                            <mo>(</mo>
                             <mi>X</mi>
-                          </sub>
-                          <mo>(</mo>
-                          <mi>x</mi>
-                          <mo>)</mo>
-                          <mi>d</mi>
-                          <mi>x</mi>
+                            <mo>)</mo>
+                            <mo>=</mo>
+                            <msubsup>
+                                <mo>∫</mo>
+                                <mo>-∞</mo>
+                                <mo>∞</mo>
+                            </msubsup>
+                            <mi>x</mi>
+                            <mi>f</mi>
+                            <sub>
+                                <mi>X</mi>
+                            </sub>
+                            <mo>(</mo>
+                            <mi>x</mi>
+                            <mo>)</mo>
+                            <mi>d</mi>
+                            <mi>x</mi>
                         </mrow>
-                      </math> <br>
+                    </math> <br>
                 </td>
             </tr>
             </tr>
@@ -448,123 +527,200 @@
                     La varianza de una variable aleatoria continua <i>X</i> se define como: <br>
                     <math>
                         <mrow>
-                          <mo>Var(X)</mo>
-                          <mo>=</mo>
-                          <msubsup>
-                            <mo>∫</mo>
-                            <mo>-∞</mo>
-                            <mo>∞</mo>
-                          </msubsup>
-                          <mo>(</mo>
-                          <mi>x</mi>
-                          <mo>-</mo>
-                          <mi>E</mi>
-                          <mo>(</mo>
-                          <mi>X</mi>
-                          <mo>)</mo>
-                          <msup>
-                            <mo>)</mo>
-                            <mn>2</mn>
-                          </msup>
-                          <mi>f</mi>
-                          <sub>
+                            <mo>Var(X)</mo>
+                            <mo>=</mo>
+                            <msubsup>
+                                <mo>∫</mo>
+                                <mo>-∞</mo>
+                                <mo>∞</mo>
+                            </msubsup>
+                            <mo>(</mo>
+                            <mi>x</mi>
+                            <mo>-</mo>
+                            <mi>E</mi>
+                            <mo>(</mo>
                             <mi>X</mi>
-                          </sub>
-                          <mo>(</mo>
-                          <mi>x</mi>
-                          <mo>)</mo>
-                          <mi>d</mi>
-                          <mi>x</mi>
+                            <mo>)</mo>
+                            <msup>
+                                <mo>)</mo>
+                                <mn>2</mn>
+                            </msup>
+                            <mi>f</mi>
+                            <sub>
+                                <mi>X</mi>
+                            </sub>
+                            <mo>(</mo>
+                            <mi>x</mi>
+                            <mo>)</mo>
+                            <mi>d</mi>
+                            <mi>x</mi>
                         </mrow>
                     </math> <br>
                     La desviación estándar es la raíz cuadrada de la varianza: <br>
                     <math>
-                    <mrow>
-                        <mo>σ<sub>X</sub></mo>
-                        <mo>=</mo>
-                        <msqrt>
                         <mrow>
-                            <mo>Var(X)</mo>
+                            <mo>σ<sub>X</sub></mo>
+                            <mo>=</mo>
+                            <msqrt>
+                                <mrow>
+                                    <mo>Var(X)</mo>
+                                </mrow>
+                            </msqrt>
                         </mrow>
-                        </msqrt>
-                    </mrow>
                     </math> <br>
                 </td>
             </tr>
             <tr>
                 <td>3.2.4 Función de Distribución Acumulada (FDA)</td>
                 <td>
-                    La función de distribución acumulada (FDA) de una variable aleatoria continua <i>X</i> se define como: <br>
+                    La función de distribución acumulada (FDA) de una variable aleatoria continua <i>X</i> se define
+                    como: <br>
                     <math>
                         <mrow>
-                          <mi>F</mi>
-                          <sub>
-                            <mi>X</mi>
-                          </sub>
-                          <mo>(</mo>
-                          <mi>x</mi>
-                          <mo>)</mo>
-                          <mo>=</mo>
-                          <mi>P</mi>
-                          <mo>(</mo>
-                          <mi>X</mi>
-                          <mo>≤</mo>
-                          <mi>x</mi>
-                          <mo>)</mo>
-                          <mo>=</mo>
-                          <msubsup>
-                            <mo>∫</mo>
-                            <mo>-∞</mo>
+                            <mi>F</mi>
+                            <sub>
+                                <mi>X</mi>
+                            </sub>
+                            <mo>(</mo>
                             <mi>x</mi>
-                          </msubsup>
-                          <mi>f</mi>
-                          <sub>
+                            <mo>)</mo>
+                            <mo>=</mo>
+                            <mi>P</mi>
+                            <mo>(</mo>
                             <mi>X</mi>
-                          </sub>
-                          <mo>(</mo>
-                          <mi>t</mi>
-                          <mo>)</mo>
-                          <mi>d</mi>
-                          <mi>t</mi>
+                            <mo>≤</mo>
+                            <mi>x</mi>
+                            <mo>)</mo>
+                            <mo>=</mo>
+                            <msubsup>
+                                <mo>∫</mo>
+                                <mo>-∞</mo>
+                                <mi>x</mi>
+                            </msubsup>
+                            <mi>f</mi>
+                            <sub>
+                                <mi>X</mi>
+                            </sub>
+                            <mo>(</mo>
+                            <mi>t</mi>
+                            <mo>)</mo>
+                            <mi>d</mi>
+                            <mi>t</mi>
                         </mrow>
-                    </math>                      
+                    </math>
                 </td>
             </tr>
             </tr>
             <tr>
                 <td>3.2.5 Cálculos de Probabilidad</td>
                 <td>
-                    Para una variable aleatoria continua <i>X</i>, la probabilidad de que <i>X</i> tome un valor dentro de un intervalo <i>[a,b]</i> se calcula como la integral de la función de densidad de probabilidad sobre ese intervalo: <br>
+                    Para una variable aleatoria continua <i>X</i>, la probabilidad de que <i>X</i> tome un valor dentro
+                    de un intervalo <i>[a,b]</i> se calcula como la integral de la función de densidad de probabilidad
+                    sobre ese intervalo: <br>
                     <math>
                         <mrow>
-                          <mi>P</mi>
-                          <mo>(</mo>
-                          <mi>a</mi>
-                          <mo>≤</mo>
-                          <mi>X</mi>
-                          <mo>≤</mo>
-                          <mi>b</mi>
-                          <mo>)</mo>
-                          <mo>=</mo>
-                          <msubsup>
-                            <mo>∫</mo>
+                            <mi>P</mi>
+                            <mo>(</mo>
                             <mi>a</mi>
-                            <mi>b</mi>
-                          </msubsup>
-                          <mi>f</mi>
-                          <sub>
+                            <mo>≤</mo>
                             <mi>X</mi>
-                          </sub>
-                          <mo>(</mo>
-                          <mi>x</mi>
-                          <mo>)</mo>
-                          <mi>d</mi>
-                          <mi>x</mi>
+                            <mo>≤</mo>
+                            <mi>b</mi>
+                            <mo>)</mo>
+                            <mo>=</mo>
+                            <msubsup>
+                                <mo>∫</mo>
+                                <mi>a</mi>
+                                <mi>b</mi>
+                            </msubsup>
+                            <mi>f</mi>
+                            <sub>
+                                <mi>X</mi>
+                            </sub>
+                            <mo>(</mo>
+                            <mi>x</mi>
+                            <mo>)</mo>
+                            <mi>d</mi>
+                            <mi>x</mi>
                         </mrow>
                     </math>
+                </td>
+            </tr>
+
+            <!-- #####################################  TEMA 4 ##################################### -->
+
+            <tr>
+                <th colspan="2">
+                    <h3>Tema 4: Distribuciones de Probabilidad</h3>
+                </th>
+            </tr>
+            <tr>
+                <th style="width: 30%;">Subtema</th>
+                <th>Definición</th>
+            </tr>
+            <tr>
+                <td>4.1 Función de probabilidad</td>
+                <td>
+                    <p>
+                        La función de probabilidad describe la probabilidad de que una variable aleatoria discreta tome un 
+                        valor específico. Para una variable aleatoria discreta <i>X</i>, la función de probabilidad <i>P(X = x)</i> se define como:
+                    </p>
+                    <div id="math-output">
+                        \( P(X = x) \)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>4.2 Distribución binomial</td>
+                <td>
+                    Para una variable aleatoria <i>X</i> que sigue una distribución binomial con parámetros <i>n</i> y
+                    <i>p</i>, la función de probabilidad <i>P(X = x)</i> está dada por:
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+
                 </td>
             </tr>
         </table>
     </div>
 </body>
+
 </html>
