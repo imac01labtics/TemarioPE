@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body> 
     <div>
         <table id="main-table" style="width: 90%;">
             <!-- #####################################  TEMA 1 ##################################### -->
@@ -516,16 +516,16 @@
                 <td>
                     <p>
                         La distribución binomial se utiliza para modelar la probabilidad de obtener un número 
-                        específico de éxitos en un número fijo de ensayos independientes, cada uno con la misma 
-                        probabilidad de éxito (<i>p</i>).
+                        específico de éxitos en un número fijo de ensayos de Bernoulli con dos resultados posibles, 
+                        cada uno con la misma probabilidad de éxito (<i>p</i>).
                         <br>
                         Fórmula de la función de probabilidad:
                     </p>
                     <div id="math-output">
-                        \( P(X = x) = {}_nC_x \cdot p^x \cdot q^{n-x} \)
+                        \( P(k; n, p) = \binom{n}{k} p^k (1 - p)^{n - k} \)
                     </div>
                     <p>
-                        Donde <i>n</i> es el número de ensayos, <i>k</i> es el número de éxitos, y <i>p</i> 
+                        Donde <i>n</i> es el número de ensayos de Bernoulli, <i>k</i> es el número de éxitos, y <i>p</i> 
                         es la probabilidad de éxito en un ensayo.
                     </p>
                 </td>
@@ -541,11 +541,11 @@
                         Fórmula de la función de probabilidad:
                     </p>
                     <div id="math-output">
-                        \( P(X = x) = \frac{{}_K C_x \cdot {}_{N-K}C_{n-x}}{{}_N C_n} \)
+                        \( P(k; N, n, K) = \frac{\binom{K}{k} \binom{N-K}{n-k}}{\binom{N}{n}} \)
                     </div>
                     <p>
                         Donde <i>N</i> es el tamaño total de la población, <i>K</i> es el número de elementos de interés en la población, 
-                        <i>n</i> es el tamaño de la muestra y <i>x</i> es el número de éxitos en la muestra.
+                        <i>n</i> es el tamaño de la muestra y <i>k</i> es el número de éxitos en la muestra.
                     </p>
                 </td>
             </tr>
@@ -559,10 +559,10 @@
                         Fórmula de la función de probabilidad:
                     </p>
                     <div id="math-output">
-                        \( P(X = x) = \frac{e^{-\lambda} \lambda^x}{x!} \)
+                        \( P(k; \lambda) = \frac{e^{-\lambda} \lambda^k}{k!} \)
                     </div>
                     <p>
-                        Donde λ es el número promedio de eventos por intervalo de tiempo o espacio, y <i>x</i> es el número de 
+                        Donde λ es el número promedio de eventos por intervalo de tiempo o espacio, y <i>k</i> es el número de 
                         eventos que queremos modelar.
                     </p>
                 </td>
@@ -577,7 +577,7 @@
                         Función de densidad de probabilidad:
                     </p>
                     <div id="math-output">
-                        \( f(x | \mu, \sigma^2) = \frac{1}{\sqrt{2 \pi \sigma^2}} e^{-\frac{(x - \mu)^2}{2 \sigma^2}} \)
+                        \( f(x; \mu, \sigma^2) = \frac{1}{\sqrt{2 \pi \sigma^2}} e^{-\frac{(x - \mu)^2}{2 \sigma^2}} \)
                     </div>
                     <p>
                         Donde 𝜇 es la media y σ<sup>2</sup> es la varianza de la distribución.
