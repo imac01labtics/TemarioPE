@@ -14,16 +14,19 @@ i{
     margin: 3px 0px;
 }
 p, ul{
-    margin: 0;
+    margin: 0px 0px 5px 0px;
+}
+.subtema-height{
+    width: 25%;
 }
 th, td {
     padding: 5px 10px;
     border: 1px solid #ccc;
 }
 table {
+    width: 90vw;
     border-collapse: collapse;
-    width: 100%;
-    margin: 0 auto;
+    margin: 10px auto;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     overflow: hidden;
@@ -42,12 +45,12 @@ tr:hover {
 }
 @keyframes slideIn {
     0% {
-        transform: translateY(-100%);
+        transform: translateY(-50%);
     }
     100% {
         transform: translateY(0);
     }
 }
 th, td {
-    animation: fadeIn 0.5s ease, slideIn 0.5s ease;
+    animation: fadeIn 0.5s ease-in, slideIn 0.5s ease-in;
 }
