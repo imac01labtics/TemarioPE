@@ -23,7 +23,7 @@ th, td {
     padding: 5px 10px;
     border: 1px solid #ccc;
 }
-table {
+#main-table {
     width: 90%;
     border-collapse: collapse;
     margin: 10px auto;
