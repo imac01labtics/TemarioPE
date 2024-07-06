@@ -9,15 +9,15 @@
     <link rel="icon" href="img/icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <!-- MathJax permite renderizar formato LaTeX -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <!-- Incluir la fuente de KaTeX -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
     <!-- Include Highlight.js CSS for Monokai theme -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/stackoverflow-light.min.css">
+    <link rel="stylesheet"
+        href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/stackoverflow-light.min.css">
 </head>
 
-<body> 
+<body>
     <div>
         <table id="main-table" style="width: 90%;">
             <!-- #####################################  TEMA 1 ##################################### -->
@@ -143,162 +143,231 @@
             <tr>
                 <td>2.1 Técnicas de Conteo</td>
                 <td>
-                    Las técnicas de conteo son herramientas fundamentales en probabilidad y estadística que nos permiten
-                    calcular el número de maneras en las que puede ocurrir un evento o una serie de eventos. Estas
-                    técnicas son esenciales para determinar las probabilidades en diferentes situaciones.
+                    <p>
+                        Las técnicas de conteo son métodos utilizados para determinar el número de posibles resultados o eventos en un conjunto
+                        dado. Estas técnicas son fundamentales en la teoría de probabilidad para calcular probabilidades y analizar eventos
+                        complejos. Incluyen la notación factorial, los principios multiplicativo y aditivo, permutaciones, combinaciones y el
+                        uso de diagramas de árbol.
+                    </p>
                 </td>
             </tr>
             <tr>
                 <td>2.1.1 Principio aditivo</td>
                 <td>
-                    El principio aditivo se utiliza cuando se desea contar el número total de maneras en las que puede
-                    ocurrir uno de varios eventos mutuamente excluyentes. Si un evento A puede ocurrir de
-                    <i>n<sub>A</sub></i> maneras y un evento B puede ocurrir de <i>n<sub>B</sub></i> maneras, y los dos
-                    eventos no pueden ocurrir simultáneamente, entonces el número total de maneras en las que puede
-                    ocurrir A o B es:
-                    <br>
-                    <i>n<sub>A</sub> + n<sub>B</sub> </i>
+                    <p>
+                        El principio aditivo establece que si dos operaciones son mutuamente excluyentes (no pueden ocurrir simultáneamente),
+                        entonces el número total de formas en que se pueden realizar ambas operaciones es la suma de las formas individuales.
+                        <br>
+                        Si una operación puede realizarse en m formas y otra en n y ambas no pueden realizarse juntas, entonces el número total 
+                        de formas en las que se pueden realizar es <i>m + n</i>.
+                    </p>
                 </td>
             </tr>
             <tr>
                 <td>2.1.2 Principio Multiplicativo</td>
                 <td>
-                    El principio multiplicativo se aplica cuando se desea contar el número total de maneras en las que
-                    puede ocurrir una serie de eventos independientes. Si un evento A puede ocurrir de n<sub>A</sub>
-                    maneras y un evento B puede ocurrir de n<sub>B</sub> maneras, entonces el número total de maneras en
-                    las que pueden ocurrir ambos eventos es:
-                    <br>
-                    <i>n<sub>A</sub> ⋅ n<sub>B</sub> </i>
+                    <p>
+                        El principio multiplicativo indica que si una operación puede realizarse de <i>m</i> formas y otra operación de <i>n</i>
+                        formas, entonces ambas operaciones pueden realizarse juntas de <i>m ⋅ n</i> formas.
+                    </p>
                 </td>
             </tr>
             <tr>
                 <td>2.1.3 Notación Factorial</td>
                 <td>
-                    La notación factorial se utiliza para contar el número de maneras en las que se pueden ordenar
-                    <i>n</i> objetos distintos. El factorial de un número <i>n</i>, denotado como <i>n!</i>, se define
-                    como:
-                    <br>
-                    <i>n! = n ⋅ (n - 1) ⋅ (n - 2) ... 3 ⋅ 2 ⋅ 1</i>
+                    <p>
+                        La notación factorial se utiliza para representar el producto de todos los enteros positivos hasta un número dado <i>n</i>.
+                        <br>
+                        <i>n</i>! = <i>n</i> ⋅ (<i>n</i> - 1) ⋅ (<i>n</i> - 2) ⋅ ... ⋅ 3 ⋅ 2 ⋅ 1
+                        <br>
+                        Por convención, 0! = 1.
+                    </p>
                 </td>
             </tr>
             <tr>
                 <td>2.1.4 Permutaciones</td>
                 <td>
-                    Las permutaciones se refieren al número de maneras de ordenar un conjunto de objetos. Si se tienen
-                    <i>n</i> objetos y se desean ordenar todos, el número de permutaciones es <i>n!</i>. Si se desea
-                    ordenar solo <i>k</i> objetos de un conjunto de <i>n</i>, el número de permutaciones se calcula
-                    como:
-                    <br>
-                    <math>
-                        <mrow>
-                            <mi>P(n,k)</mi>
-                            <mo>=</mo>
-                            <mfrac>
-                                <mi>n!</mi>
-                                <mi>(n-k)!</mi>
-                            </mfrac>
-                        </mrow>
-                    </math>
+                    <p>
+                        Una permutación es un arreglo de todos los elementos de un conjunto donde el orden importa.
+                        <br>
+                        Sean  <i>n</i>  y  <i>r</i>  números naturales no negativos, con <i>r ≤ n</i>:
+                        <ol type="a">
+                            <li>El número de permutaciones de  n  objetos distintos es  n! .</li>
+                            <li>
+                                El número de permutaciones de  n  objetos distintos, tomando  r  a la vez, es denotado como:
+                                <div id="math-output">
+                                    \( _nP_r = \frac{n!}{(n - r)!} \)
+                                </div>
+                                Esto representa el número de maneras de ordenar <i>n</i> elementos seleccionados de un total de <i>r</i> elementos distintos.
+                            </li>
+                        </ol>
+                    </p>
                 </td>
             </tr>
             <tr>
                 <td>2.1.5 Combinaciones</td>
                 <td>
-                    Las combinaciones se refieren al número de maneras de seleccionar <i>k</i> objetos de un conjunto de
-                    <i>n</i> sin importar el orden. El número de combinaciones se calcula como:
-                    <br>
-                    <math>
-                        <mrow>
-                            <mi>C(n,k)</mi>
-                            <mo>=</mo>
-                            <mtable>
-                                <mtr>
-                                    <mtd>
-                                        <mi>n</mi>
-                                    </mtd>
-                                </mtr>
-                                <mtr>
-                                    <mtd>
-                                        <mi>k</mi>
-                                    </mtd>
-                                </mtr>
-                            </mtable>
-                            <mo>=</mo>
-                            <mfrac>
-                                <mi>n!</mi>
-                                <mi>k!(n-k)!</mi>
-                            </mfrac>
-                        </mrow>
-                    </math>
+                    <p>
+                        Una combinación es un subconjunto no ordenado de tamaño  <i>r</i>  de un conjunto de  <i>n</i>  objetos distintos.
+                        <br>
+                        Sean  <i>n</i>  y  <i>r</i>  números naturales no negativos, con <i>r ≤ n</i>:
+                        <ol type="a">
+                            <li>
+                                El número de combinaciones de <i>n</i> objetos distintos tomados <i>r</i> a la vez se denota como:
+                                <div id="math-output">
+                                    \( _nC_r = \binom{n}{r} = \frac{n!}{r!(n - r)!} \)
+                                </div>
+                                Esto representa el número de maneras de ordenar <i>n</i> elementos seleccionados de un total de <i>r</i> elementos distintos.
+                            </li>
+                        </ol>
+                    </p>
                 </td>
             </tr>
             <tr>
                 <td>2.1.6 Diagrama de Árbol</td>
                 <td>
-                    Un diagrama de árbol es una representación gráfica que muestra todas las posibles combinaciones o
-                    resultados de una serie de eventos. Se utiliza para visualizar y calcular las probabilidades y
-                    posibles resultados en escenarios con múltiples etapas.
+                    <p>
+                        Un diagrama de árbol se utiliza para visualizar todos los posibles resultados de un experimento o evento, mostrando las
+                        ramas correspondientes a cada opción disponible. Estos permiten representar de manera clara y estructurada eventos simples y
+                        compuestos, facilitando el cálculo de probabilidades usando el enfoque clásico de casos favorables sobre casos totales.
+                    </p>
                 </td>
             </tr>
             <tr>
                 <td>2.1.7 Teorema del Binomio</td>
                 <td>
-                    El teorema del binomio proporciona una fórmula para expandir potencias de binomios. Para cualquier
-                    número real <i>a</i> y <i>b</i>, y un número entero no negativo <i>n</i>.
-                    <!--, el teorema del binomio se expresa como:-->
+                    El teorema del binomio establece la expansión de un binomio elevado a una potencia <i>n</i>.
+                    <div id="math-output">
+                        \( (a + b)^n = \sum_{k=0}^{n} \binom{n}{k} a^{n-k} b^k \)
+                    </div>
+                    Donde 
+                    <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                        <mrow>
+                            <mo>(</mo>
+                            <mfrac linethickness="0">
+                                <mi>n</mi><mi>k</mi>
+                            </mfrac>
+                            <mo>)</mo>
+                        </mrow>
+                    </math>
+                    es el coeficiente binomial que representa el número de formas de elegir <i>k</i> elementos de un conjunto de <i>n</i> elementos.
                 </td>
             </tr>
             <tr>
                 <td>2.2 Teoría elemental de probabilidad</td>
                 <td>
-                    La teoría elemental de probabilidad establece los principios básicos para calcular probabilidades,
-                    incluyendo los axiomas de Kolmogorov que definen propiedades esenciales como no negatividad, certeza
-                    y aditividad de las probabilidades.
+                    <p>
+                        La teoría elemental de probabilidad proporciona herramientas para cuantificar la incertidumbre en eventos aleatorios y sus resultados.<br>
+                        Se utiliza para calcular probabilidades simples basadas en el número de resultados favorables sobre el número total de
+                        resultados posibles, especialmente en situaciones donde todos los resultados son igualmente probables. <br>
+                        La probabilidad <i>P(A)</i> de un evento <i>A</i> se calcula como el cociente entre los casos
+                        favorables para <i>A</i> y los casos totales posibles.
+                    </p>
+                    <div id="math-output">
+                        \( P(A) = \frac{\text{Casos favorables para } A}{\text{Casos totales posibles}} \)
+                    </div>
                 </td>
             </tr>
             <tr>
                 <td>2.3 Probabilidad de Eventos</td>
                 <td>
-                    <b>Espacio Muestral y Evento</b> <br>
-                    Espacio muestral: Conjunto de todos los posibles resultados de un experimento. <br>
-                    Evento: Subconjunto del espacio muestral. <br>
-                    <b>Simbología y Operaciones </b> <br>
-                    Unión (A∪B): Evento que ocurre si <i>A</i> o <i>B</i> ocurren. <br>
-                    Intersección (A∩B): Evento que ocurre si <i>A</i> y <i>B</i> ocurren. <br>
-                    Diagramas de Venn: Herramienta gráfica para representar eventos y sus relaciones. <br>
+                    <ul>
+                        <li><b>Espacio muestral:</b> Conjunto de todos los posibles resultados de un experimento aleatorio.</li>
+                        <li><b>Evento:</b> Subconjunto del espacio muestral que representa un resultado específico o conjunto de resultados.</li>
+                        <li><b>Simbología:</b> Utilización de notaciones como <i>P(A)</i> para probabilidad de <i>A</i>∪<i>B</i> para unión de eventos <i>A</i>∩<i>B</i> para intersección de eventos <i>A</i> y <i>B</i>.</li>
+                        <li><b>Operaciones con eventos:</b> Uniones e intersecciones de eventos, representadas visualmente con diagramas de Venn para clarificar relaciones entre eventos.</li>
+                        <li><b>Diagramas de Venn:</b> Se utilizan para visualizar las relaciones entre eventos y sus intersecciones dentro del espacio muestral.</li>
+                    </ul>
                 </td>
             </tr>
             <tr>
                 <td>2.4 Probabilidad con Técnicas de Conteo</td>
                 <td>
-                    Utiliza combinaciones y permutaciones para contar el número de formas en que pueden ocurrir eventos,
-                    aplicando axiomas y teoremas como el de la probabilidad total y el de Bayes para calcular
-                    probabilidades.
+                    En la teoría de la probabilidad, las técnicas de conteo son utilizadas para determinar el número de casos favorables y
+                    totales dentro de un espacio muestral, lo cual es crucial para calcular probabilidades. A continuación, se detallan
+                    aspectos clave de estas técnicas: <br>
+                    <b>Axiomas:</b>
+                    <ul>
+                        <li>
+                            <b>No negatividad:</b> La probabilidad de cualquier evento <i>E</i> es un número no negativo.
+                            <div id="math-output" style="font-size: 1rem;">
+                                \( P(E) \geq 0 \)
+                            </div>
+                        </li>
+                        <li>
+                            <b>Normalización:</b> La probabilidad del espacio muestral completo <i>S</i> es igual a 1.
+                            <div id="math-output" style="font-size: 1rem;">
+                                \( P(S) = 1 \)
+                            </div>
+                        </li>
+                        <li>
+                            <b>Aditividad:</b> La probabilidad de la unión de dos eventos mutuamente excluyentes es la suma de las probabilidades de los eventos individuales.
+                            <div id="math-output" style="font-size: 1rem;">
+                                \( P(E \cup F) = P(E) + P(F) \quad \text{si } E \cap F = \emptyset \)
+                            </div>
+                        </li>
+                    </ul>
+                    <b>Teoremas:</b>
+                    <ul>
+                        <li>
+                            <b>Teorema de la probabilidad condicional:</b>
+                            Este teorema calcula la probabilidad de que ocurra el evento <i>E</i> dado que ya ha ocurrido el evento <i>F</i>.
+                            <div id="math-output" style="font-size: 1rem;">
+                                \( P(E \mid F) = \frac{P(E \cap F)}{P(F)} \quad \text{si } P(F) > 0 \)
+                            </div>
+                        </li>
+                        <li>
+                            <b>Teorema del evento complementario:</b>
+                            <i>E<sup>c</sup></i> es el complemento de <i>E</i>, es decir, el evento que no es <i>E</i>.
+                            <div id="math-output" style="font-size: 1rem;">
+                                \( P(E^c) = 1 - P(E) \)
+                            </div>
+                        </li>
+                        <li>
+                            <b>Regla de multiplicación para eventos independientes:</b>
+                            Si <i>E</i> y <i>F</i> son eventos independientes, la probabilidad conjunta de ambos eventos es el producto de sus probabilidades individuales.
+                            <div id="math-output" style="font-size: 1rem;">
+                                \( P(E \cap F) = P(E) \cdot P(F) \)
+                            </div>
+                        </li>
+                    </ul>
                 </td>
             </tr>
             <tr>
                 <td>2.5 Probabilidad Condicional</td>
                 <td>
-                    La probabilidad condicional P(A|B) mide la probabilidad de que ocurra el evento <i>A</i> dado que
-                    <i>B</i> ha ocurrido. Los eventos pueden ser dependientes (la ocurrencia de uno afecta al otro) o
-                    independientes (la ocurrencia de uno no afecta al otro).
+                    <ul>
+                        <li><b>Dependiente:</b> La probabilidad de que ocurra un evento depende de que otro evento ya haya ocurrido.</li>
+                        <li><b>Independiente:</b> La probabilidad de que ocurra un evento no se ve afectada por la ocurrencia o no ocurrencia de otro evento.</li>
+                    </ul>
                 </td>
             </tr>
             <tr>
                 <td>2.6 Ley Multiplicativa</td>
                 <td>
-                    Calcula la probabilidad de la intersección de dos eventos: <br>
-                    Eventos dependientes: <br>
-                    P(A∩B)=P(A)⋅P(B∣A) <br>
-                    Eventos independientes: <br>
-                    P(A∩B)=P(A)⋅P(B) <br>
+                    <p>
+                        La ley multiplicativa de la probabilidad se refiere a la probabilidad conjunta de dos eventos.
+                    </p>
+                    <div id="math-output" style="font-size: 1rem;">
+                        \( P(E \cap F) = P(E) \cdot P(F \mid E) \)
+                    </div>
+                    <p>
+                        Donde <i>P(E ∩F)</i> es la probabilidad de que ocurran ambos eventos <i>P(E)</i> es la probabilidad del evento 
+                        <i>E</i>, y <i>P(F |E)</i> es la probabilidad condicional de <i>F</i> dado que <i>E</i> ha ocurrido.
+                    </p>
                 </td>
             </tr>
             <tr>
                 <td>2.7 Eventos Independientes: Regla de Bayes</td>
                 <td>
-                    La regla de Bayes permite actualizar la probabilidad de un evento basado en nueva información,
-                    calculando P(B<sub>i</sub>|A) a partir de P(A|B<sub>i</sub>) y P(B<sub>i</sub>) .
+                    Cuando dos eventos son independientes, conocer la ocurrencia de uno no proporciona información útil sobre la ocurrencia
+                    del otro. Por ejemplo, lanzar una moneda dos veces: el resultado del primer lanzamiento no afecta las probabilidades del
+                    segundo lanzamiento.
+                    <br>
+                    Si <i>E</i> y <i>F</i> son independientes, entonces <i>E<sup>c</sup></i>(el complemento de <i>E</i> ) y <i>F</i> también son 
+                    independientes, y viceversa.
+                    <br>
+                    Más de dos eventos pueden ser independientes simultáneamente si cada par de eventos es independiente entre sí.
                 </td>
             </tr>
 
@@ -317,11 +386,11 @@
                 <td>3.1 Variables aleatorias discretas</td>
                 <td>
                     <p>
-                        Las variables aleatorias discretas son aquellas cuyos valores posibles forman un 
-                        conjunto finito o infinito numerable. Esto significa que la variable solo puede tomar 
-                        valores específicos, como números enteros, y cada uno de estos valores tiene una 
-                        probabilidad asociada. Por ejemplo, el resultado de lanzar un dado es una variable 
-                        aleatoria discreta, ya que solo puede tomar valores como 1, 2, 3, 4, 5 o 6, cada uno 
+                        Las variables aleatorias discretas son aquellas cuyos valores posibles forman un
+                        conjunto finito o infinito numerable. Esto significa que la variable solo puede tomar
+                        valores específicos, como números enteros, y cada uno de estos valores tiene una
+                        probabilidad asociada. Por ejemplo, el resultado de lanzar un dado es una variable
+                        aleatoria discreta, ya que solo puede tomar valores como 1, 2, 3, 4, 5 o 6, cada uno
                         con una probabilidad específica.
                     </p>
                 </td>
@@ -330,7 +399,7 @@
                 <td>3.1.1 Distribución de Probabilidad en Forma General</td>
                 <td>
                     <p>
-                        La distribución de probabilidad describe cómo se distribuyen las probabilidades 
+                        La distribución de probabilidad describe cómo se distribuyen las probabilidades
                         entre los posibles valores que puede tomar una variable aleatoria.
                         <br>
                         Las propiedades que debe cumplir una distribución de probabilidad son:
@@ -347,14 +416,14 @@
                 <td>3.1.2 Valor Esperado</td>
                 <td>
                     <p>
-                        El valor esperado de una variable aleatoria es el promedio ponderado de todos los 
+                        El valor esperado de una variable aleatoria es el promedio ponderado de todos los
                         posibles valores que puede tomar, ponderados por sus probabilidades respectivas.
                     </p>
                     <div id="math-output">
                         \( \mu = E[X] = \sum_{i=1}^{n} X_i P(X_i) \)
                     </div>
                     <p>
-                        Donde <i>X<sub>i</sub></i> son los posibles valores que puede tomar la variable aleatoria 
+                        Donde <i>X<sub>i</sub></i> son los posibles valores que puede tomar la variable aleatoria
                         <i>X</i>, y <i>P(X<sub>i</sub>)</i> son las probabilidades asociadas a estos valores.
                     </p>
                 </td>
@@ -363,14 +432,14 @@
                 <td>3.1.3 Varianza y Desviación Estándar</td>
                 <td>
                     <p>
-                        La varianza mide la dispersión de los valores de una variable aleatoria respecto a su media, 
-                        y se calcula de la siguiente manera: 
+                        La varianza mide la dispersión de los valores de una variable aleatoria respecto a su media,
+                        y se calcula de la siguiente manera:
                     </p>
                     <div id="math-output">
                         $$
                         \begin{align}
-                            \sigma^2 &= Var(X) = \sum_{i=1}^{n} P(X_i) (X_i - \mu)^2 \\\\
-                            \sigma^2 &= Var(X) = E[X^2] - [E[X]]^2
+                        \sigma^2 &= Var(X) = \sum_{i=1}^{n} P(X_i) (X_i - \mu)^2 \\\\
+                        \sigma^2 &= Var(X) = E[X^2] - [E[X]]^2
                         \end{align}
                         $$
                     </div>
@@ -387,16 +456,15 @@
                 <td>3.1.4 Función de Distribución Acumulada (FDA)</td>
                 <td>
                     <p>
-                        La función acumulada (o función de distribución acumulada) de una variable aleatoria 
-                        <i>X</i>, denotada como <i>F(x)</i>, indica la probabilidad de que <i>X</i> sea menor 
+                        La función acumulada (o función de distribución acumulada) de una variable aleatoria
+                        <i>X</i>, denotada como <i>F(x)</i>, indica la probabilidad de que <i>X</i> sea menor
                         o igual a un valor dado <i>x</i>.
                     </p>
                     <div id="math-output">
                         \( F(x) = P(X \leq x) \)
                         <br><br>
-                        \( P(X \geq x) + P(X < x) = 1 \)
-                        <br><br>
-                        \( P(X > x) + P(X \leq x) = 1 \)
+                        \( P(X \geq x) + P(X < x)=1 \) <br><br>
+                            \( P(X > x) + P(X \leq x) = 1 \)
                     </div>
                 </td>
             </tr>
@@ -404,12 +472,12 @@
                 <td>3.2 Variables Aleatorias Continuas</td>
                 <td>
                     <p>
-                        En contraste con las variables aleatorias discretas, las variables aleatorias continuas 
-                        pueden tomar cualquier valor dentro de un intervalo real. Esto significa que los 
+                        En contraste con las variables aleatorias discretas, las variables aleatorias continuas
+                        pueden tomar cualquier valor dentro de un intervalo real. Esto significa que los
                         resultados pueden ser números reales y no necesariamente valores específicos. <br>
-                        Por ejemplo, la altura de una persona o la temperatura medida en grados Celsius son ejemplos 
-                        de variables aleatorias continuas, ya que pueden tomar cualquier valor dentro de un rango específico 
-                        (por ejemplo, de 0 a 100 cm para la altura, o de -273.15°C a 100°C para la temperatura).
+                        Por ejemplo, la altura de una persona o la temperatura medida en grados Celsius son ejemplos
+                        de variables aleatorias continuas, ya que pueden tomar cualquier valor dentro de un rango
+                        específico (por ejemplo, de 0 a 100 cm para la altura, o de -273.15°C a 100°C para la temperatura).
                     </p>
                 </td>
             </tr>
@@ -417,8 +485,8 @@
                 <td>3.2.1 Distribución de Probabilidad en Forma General</td>
                 <td>
                     <p>
-                        La distribución de probabilidad para variables aleatorias continuas se describe mediante una función de 
-                        densidad de probabilidad <i>f(x)</i>.
+                        La distribución de probabilidad para variables aleatorias continuas se describe mediante una
+                        función de densidad de probabilidad <i>f(x)</i>.
                         <br>
                         Las propiedades que debe cumplir una función de densidad son:
                     </p>
@@ -427,7 +495,7 @@
                         <br><br>
                         \( \int\limits_{-\infty}^{\infty} f(x) \, dx = 1 \)
                         <br><br>
-                        \( P(a < X < b) = \int\limits_{a}^{b} f(x) \, dx \)
+                        \( P(a < X < b)=\int\limits_{a}^{b} f(x) \, dx \) 
                     </div>
                 </td>
             </tr>
@@ -435,7 +503,7 @@
                 <td>3.2.2 Valor Esperado</td>
                 <td>
                     <p>
-                        El valor esperado de una variable aleatoria continua es el promedio ponderado de todos 
+                        El valor esperado de una variable aleatoria continua es el promedio ponderado de todos
                         los posibles valores que puede tomar, ponderados por su función de densidad de probabilidad.
                     </p>
                     <div id="math-output">
@@ -448,15 +516,15 @@
                 <td>3.2.3 Varianza y Desviación Estándar</td>
                 <td>
                     <p>
-                        La varianza y la desviación estándar de una variable aleatoria continua se calculan de 
-                        manera similar a las variables discretas, pero integrando respecto a la función de 
+                        La varianza y la desviación estándar de una variable aleatoria continua se calculan de
+                        manera similar a las variables discretas, pero integrando respecto a la función de
                         densidad de probabilidad.
                     </p>
                     <div id="math-output">
                         $$
                         \begin{align}
-                            \sigma^2 &= Var(X) = \int\limits_{-\infty}^{\infty} (x - \mu)^2 f(x) \, dx \\\\
-                            \sigma^2 &= Var(X) = E[X^2] - [E[X]]^2
+                        \sigma^2 &= Var(X) = \int\limits_{-\infty}^{\infty} (x - \mu)^2 f(x) \, dx \\\\
+                        \sigma^2 &= Var(X) = E[X^2] - [E[X]]^2
                         \end{align}
                         $$
                     </div>
@@ -473,7 +541,8 @@
                 <td>3.2.4 Función de Distribución Acumulada (FDA)</td>
                 <td>
                     <p>
-                        La función acumulada <i>F(x)</i> de una variable aleatoria continua indica la probabilidad de que 
+                        La función acumulada <i>F(x)</i> de una variable aleatoria continua indica la probabilidad de
+                        que
                         la variable aleatoria <i>X</i> sea menor o igual a un valor dado <i>x</i>.
                     </p>
                     <div id="math-output">
@@ -481,7 +550,8 @@
                     </div>
                     <br>
                     <p>
-                        Y la probabilidad de que <i>X</i> esté en un intervalo <i>[a,b]</i> se calcula como <i> P(a < X ≤ b) = F(b) - F(a) </i>.
+                        Y la probabilidad de que <i>X</i> esté en un intervalo [<i>a,b</i>] se calcula como 
+                        <i>P</i>(<i>a < X ≤ b</i>)<i> = F</i>(<i>b</i>) - F</i>(<i>b</i>).
                     </p>
                 </td>
             </tr>
@@ -489,8 +559,8 @@
             <tr>
                 <td>3.2.5 Cálculos de Probabilidad</td>
                 <td>
-                    Los cálculos de probabilidad para variables aleatorias continuas se realizan principalmente mediante 
-                    integrales de la función de densidad de probabilidad (PDF) en intervalos específicos, como se 
+                    Los cálculos de probabilidad para variables aleatorias continuas se realizan principalmente mediante
+                    integrales de la función de densidad de probabilidad (PDF) en intervalos específicos, como se
                     indicó anteriormente.
                 </td>
             </tr>
@@ -510,8 +580,8 @@
                 <td>4.1 Función de probabilidad</td>
                 <td>
                     <p>
-                        Se define como una función que asigna probabilidades a cada valor posible de la variable. 
-                        La función de probabilidad asigna la probabilidad de que una variable aleatoria discreta 
+                        Se define como una función que asigna probabilidades a cada valor posible de la variable.
+                        La función de probabilidad asigna la probabilidad de que una variable aleatoria discreta
                         <i>X</i> tome un valor específico <i>x</i>.
                     </p>
                     <div id="math-output">
@@ -523,8 +593,8 @@
                 <td>4.2 Distribución binomial</td>
                 <td>
                     <p>
-                        La distribución binomial se utiliza para modelar la probabilidad de obtener un número 
-                        específico de éxitos en un número fijo de ensayos de Bernoulli con dos resultados posibles, 
+                        La distribución binomial se utiliza para modelar la probabilidad de obtener un número
+                        específico de éxitos en un número fijo de ensayos de Bernoulli con dos resultados posibles,
                         cada uno con la misma probabilidad de éxito (<i>p</i>).
                         <br>
                         Fórmula de la función de probabilidad:
@@ -533,20 +603,20 @@
                         \( P(k; n, p) = \binom{n}{k} p^k (1 - p)^{n - k} \)
                     </div>
                     <p>
-                        Donde <i>n</i> es el número de ensayos de Bernoulli, <i>k</i> es el número de éxitos, y <i>p</i> 
+                        Donde <i>n</i> es el número de ensayos de Bernoulli, <i>k</i> es el número de éxitos, y <i>p</i>
                         es la probabilidad de éxito en un ensayo.
                         <br>
                         Cálculo de la media:
-                        <div id="math-output">
-                            \( np \)
-                        </div>
-                        Cálculo de la varianza:
-                        <div id="math-output">
-                            \( np(1 - p) \)
-                        </div>
+                    <div id="math-output">
+                        \( np \)
+                    </div>
+                    Cálculo de la varianza:
+                    <div id="math-output">
+                        \( np(1 - p) \)
+                    </div>
                     </p>
 <pre>
- Código en Python
+<b> Código en Python</b>
 <code class="python">from scipy.stats import binom
 
 n = 10
@@ -560,8 +630,8 @@ prob = binom.pmf(k, n, p)
                 <td>4.3 Distribución hipergeométrica</td>
                 <td>
                     <p>
-                        La distribución hipergeométrica modela la probabilidad de obtener un número específico 
-                        de elementos de interés (éxitos) en una muestra extraída sin reemplazo de una población 
+                        La distribución hipergeométrica modela la probabilidad de obtener un número específico
+                        de elementos de interés (éxitos) en una muestra extraída sin reemplazo de una población
                         finita dividida en dos grupos.
                         <br>
                         Fórmula de la función de probabilidad:
@@ -570,7 +640,8 @@ prob = binom.pmf(k, n, p)
                         \( P(k; N, n, K) = \frac{\binom{K}{k} \binom{N-K}{n-k}}{\binom{N}{n}} \)
                     </div>
                     <p>
-                        Donde <i>N</i> es el tamaño total de la población, <i>K</i> es el número de elementos de interés en la población, 
+                        Donde <i>N</i> es el tamaño total de la población, <i>K</i> es el número de elementos de interés
+                        en la población,
                         <i>n</i> es el tamaño de la muestra y <i>k</i> es el número de éxitos en la muestra.
                         <br>
                         Cálculo de la media:
@@ -583,7 +654,7 @@ prob = binom.pmf(k, n, p)
                         </div>
                     </p>
 <pre>
- Código en Python
+<b> Código en Python</b>
 <code class="python">from scipy.stats import hypergeom
 N = 100
 n = 20
@@ -597,7 +668,8 @@ prob = hypergeom.pmf(k, N, n, K)
                 <td>4.4 Distribución de Poisson</td>
                 <td>
                     <p>
-                        La distribución de Poisson se utiliza para modelar el número de eventos de baja frecuencia (eventos raros) 
+                        La distribución de Poisson se utiliza para modelar el número de eventos de baja frecuencia
+                        (eventos raros)
                         que ocurren en un intervalo de tiempo o espacio.
                         <br>
                         Fórmula de la función de probabilidad:
@@ -606,7 +678,8 @@ prob = hypergeom.pmf(k, N, n, K)
                         \( P(k; \lambda) = \frac{e^{-\lambda} \lambda^k}{k!} \)
                     </div>
                     <p>
-                        Donde λ es el número promedio de eventos por intervalo de tiempo o espacio, y <i>k</i> es el número de 
+                        Donde λ es el número promedio de eventos por intervalo de tiempo o espacio, y <i>k</i> es el
+                        número de
                         eventos que queremos modelar.
                         <br>
                         Cálculo de la media:
@@ -619,7 +692,7 @@ prob = hypergeom.pmf(k, N, n, K)
                         </div>
                     </p>
 <pre>
- Código en Python
+<b> Código en Python</b>
 <code class="python">from scipy.stats import poisson
 lmbda = 3
 k=2
@@ -631,7 +704,8 @@ prob = poisson.pmf(k, lmbda)
                 <td>4.5 Distribución normal</td>
                 <td>
                     <p>
-                        La distribución normal es utilizada para modelar una amplia variedad de fenómenos naturales y sociales 
+                        La distribución normal es utilizada para modelar una amplia variedad de fenómenos naturales y
+                        sociales
                         debido a su forma de campana y propiedades estadísticas bien conocidas.
                         <br>
                         Función de densidad de probabilidad:
@@ -652,7 +726,7 @@ prob = poisson.pmf(k, lmbda)
                         </div>
                     </p>
 <pre>
- Código en Python
+<b> Código en Python</b>
 <code class="python">from scipy.stats import norm
 mu = 0
 sigma = 1
@@ -665,7 +739,7 @@ prob = norm.pdf(x, mu, sigma)
                 <td>4.6 Distribución T-student</td>
                 <td>
                     <p>
-                        La distribución T-student se utiliza para inferencia estadística cuando el tamaño de la 
+                        La distribución T-student se utiliza para inferencia estadística cuando el tamaño de la
                         muestra es pequeño y la varianza de la población es desconocida.
                         <br>
                         Fórmula de la función de densidad de probabilidad:
@@ -674,8 +748,9 @@ prob = norm.pdf(x, mu, sigma)
                         \( f(t | \nu) = \frac{\Gamma\left(\frac{\nu + 1}{2}\right)}{\sqrt{\nu \pi} \Gamma\left(\frac{\nu}{2}\right) \left(1 + \frac{t^2}{\nu}\right)^{\frac{\nu + 1}{2}}} \)
                     </div>
                     <p>
-                        Donde <i>t</i> es la variable aleatoria T de Student, <i>v</i> son los grados de libertad de la distribución 
-                        y <i>Γ(⋅)</i> denota la función gamma, que para un entero <i>n</i> es <i>(n-1)!</i>.
+                        Donde <i>t</i> es la variable aleatoria T de Student, <i>v</i> son los grados de libertad de la
+                        distribución
+                        y <i>Γ</i>(⋅) denota la función gamma, que para un entero <i>n</i> es (<i>n</i>-1)!.
                     </p>
                 </td>
             </tr>
@@ -683,16 +758,19 @@ prob = norm.pdf(x, mu, sigma)
                 <td>4.7 Distribución Chi cuadrada</td>
                 <td>
                     <p>
-                        La distribución Chi cuadrada se utiliza para pruebas de hipótesis y para construir intervalos de confianza 
+                        La distribución Chi cuadrada se utiliza para pruebas de hipótesis y para construir intervalos de
+                        confianza
                         sobre la varianza de una población normalmente distribuida.
                         <br>
                         Función de densidad de probabilidad:
                     </p>
                     <div id="math-output">
-                        \( f(x | \nu) = \frac{x^{\frac{\nu}{2} - 1} e^{-\frac{x}{2}}}{2^{\frac{\nu}{2}} \Gamma\left(\frac{\nu}{2}\right)} \)
+                        \( f(x | \nu) = \frac{x^{\frac{\nu}{2} - 1} e^{-\frac{x}{2}}}{2^{\frac{\nu}{2}}
+                        \Gamma\left(\frac{\nu}{2}\right)} \)
                     </div>
                     <p>
-                        Donde <i>x</i> es la variable aleatoria Chi-cuadrado, <i>v</i> es el número de grados de libertad y <i>Γ(⋅)</i> denota la función gamma.
+                        Donde <i>x</i> es la variable aleatoria Chi-cuadrado, <i>v</i> es el número de grados de
+                        libertad y <i>Γ</i>(⋅) denota la función gamma.
                     </p>
                 </td>
             </tr>
@@ -700,7 +778,7 @@ prob = norm.pdf(x, mu, sigma)
                 <td>4.8 Distribución F</td>
                 <td>
                     <p>
-                        La distribución F se utiliza principalmente en análisis de varianza (ANOVA) y en 
+                        La distribución F se utiliza principalmente en análisis de varianza (ANOVA) y en
                         comparaciones de varianzas entre dos o más muestras.
                         <br>
                         Función de densidad de probabilidad:
@@ -709,14 +787,15 @@ prob = norm.pdf(x, mu, sigma)
                         \( f(x | d_1, d_2) = \frac{\Gamma\left(\frac{d_1 + d_2}{2}\right) \left(\frac{d_1}{d_2}\right)^{\frac{d_1}{2}} x^{\frac{d_1}{2} - 1}}{\Gamma\left(\frac{d_1}{2}\right) \Gamma\left(\frac{d_2}{2}\right) \left(1 + \frac{d_1 x}{d_2}\right)^{\frac{d_1 + d_2}{2}}} \)
                     </div>
                     <p>
-                        Donde donde <i>d1</i> y <i>d2</i> son los grados de libertad de las dos muestras que se están comparando.
+                        Donde donde <i>d</i><sub>1</sub> y <i>d</i><sub>2</sub> son los grados de libertad de las dos muestras que se están
+                        comparando.
                     </p>
                 </td>
             </tr>
         </table>
     </div>
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
-<script>hljs.highlightAll();</script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 </body>
 </html>
