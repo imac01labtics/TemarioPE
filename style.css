@@ -9,7 +9,7 @@ i{
 }
 #math-output{
     text-align: center;
-    font-size: 1.13rem;
+    font-size: 1.3rem;
     font-weight: 500;
     margin: 3px 0px;
 }
@@ -52,4 +52,15 @@ tr:hover {
 }
 th, td {
     animation: fadeIn 0.5s ease-in, slideIn 0.5s ease-in;
+}
+pre, code {
+    margin: 0;
+    padding: 0;
+    overflow: auto; /* Para manejar líneas largas de código */
+}
+pre{
+    margin: auto;
+    background-color: #ccc;
+    width: 60%;
+    border-radius: 10px;
 }

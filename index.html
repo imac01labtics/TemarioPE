@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temario Probabilidad y Estadística</title>
+    <!-- Recursos -->
     <link rel="icon" href="img/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
     <!-- MathJax permite renderizar formato LaTeX -->
-    <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <!-- Incluir la fuente de KaTeX -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">    
+    <!-- Include Highlight.js CSS for Monokai theme -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/stackoverflow-light.min.css">
 </head>
 
 <body> 
@@ -332,11 +335,10 @@
                         <br>
                         Las propiedades que debe cumplir una distribución de probabilidad son:
                         <br>
-                        <center>
-                            <i style="font-size: 1.22em; font-weight: semi-bolt;">0 ≤ P(X<sub>i</sub>) ≤ 1</i>
-                        </center>
                     </p>
                     <div id="math-output">
+                        \( 0 ≤ P(Xi) ≤ 1 \)
+                        <br>
                         \( \sum_{i=1}^{N} P(X_i) = 1 \)
                     </div>
                 </td>
@@ -365,9 +367,12 @@
                         y se calcula de la siguiente manera: 
                     </p>
                     <div id="math-output">
-                        \( \sigma^2 = Var(X) = \sum_{i=1}^{n} P(X_i) (X_i - \mu)^2 \)
-                        <br><br>
-                        \( \sigma^2 = Var(X) = E[X^2] - [E[X]]^2 \)
+                        $$
+                        \begin{align}
+                            \sigma^2 &= Var(X) = \sum_{i=1}^{n} P(X_i) (X_i - \mu)^2 \\\\
+                            \sigma^2 &= Var(X) = E[X^2] - [E[X]]^2
+                        \end{align}
+                        $$
                     </div>
                     <br>
                     <p>
@@ -448,9 +453,12 @@
                         densidad de probabilidad.
                     </p>
                     <div id="math-output">
-                        \( \sigma^2 = Var(X) = \int\limits_{-\infty}^{\infty} (x - \mu)^2 f(x) \, dx \)
-                        <br><br>
-                        \( \sigma^2 = Var(X) = E[X^2] - [E[X]]^2 \)
+                        $$
+                        \begin{align}
+                            \sigma^2 &= Var(X) = \int\limits_{-\infty}^{\infty} (x - \mu)^2 f(x) \, dx \\\\
+                            \sigma^2 &= Var(X) = E[X^2] - [E[X]]^2
+                        \end{align}
+                        $$
                     </div>
                     <br>
                     <p>
@@ -527,7 +535,25 @@
                     <p>
                         Donde <i>n</i> es el número de ensayos de Bernoulli, <i>k</i> es el número de éxitos, y <i>p</i> 
                         es la probabilidad de éxito en un ensayo.
+                        <br>
+                        Cálculo de la media:
+                        <div id="math-output">
+                            \( np \)
+                        </div>
+                        Cálculo de la varianza:
+                        <div id="math-output">
+                            \( np(1 - p) \)
+                        </div>
                     </p>
+<pre>
+ Código en Python
+<code class="python">from scipy.stats import binom
+
+n = 10
+p = 0.5
+k=4
+prob = binom.pmf(k, n, p)
+</code></pre>
                 </td>
             </tr>
             <tr>
@@ -546,7 +572,25 @@
                     <p>
                         Donde <i>N</i> es el tamaño total de la población, <i>K</i> es el número de elementos de interés en la población, 
                         <i>n</i> es el tamaño de la muestra y <i>k</i> es el número de éxitos en la muestra.
+                        <br>
+                        Cálculo de la media:
+                        <div id="math-output">
+                            \( \frac{nK}{N} \)
+                        </div>
+                        Cálculo de la varianza:
+                        <div id="math-output">
+                            \( \frac{nK (N-K)(N-n)}{N^2(N-1)} \)
+                        </div>
                     </p>
+<pre>
+ Código en Python
+<code class="python">from scipy.stats import hypergeom
+N = 100
+n = 20
+K = 10
+k=4
+prob = hypergeom.pmf(k, N, n, K)
+</code></pre>
                 </td>
             </tr>
             <tr>
@@ -564,7 +608,23 @@
                     <p>
                         Donde λ es el número promedio de eventos por intervalo de tiempo o espacio, y <i>k</i> es el número de 
                         eventos que queremos modelar.
+                        <br>
+                        Cálculo de la media:
+                        <div id="math-output">
+                            \( \lambda \)
+                        </div>
+                        Cálculo de la varianza:
+                        <div id="math-output">
+                            \( \lambda \)
+                        </div>
                     </p>
+<pre>
+ Código en Python
+<code class="python">from scipy.stats import poisson
+lmbda = 3
+k=2
+prob = poisson.pmf(k, lmbda)
+</code></pre>
                 </td>
             </tr>
             <tr>
@@ -581,7 +641,24 @@
                     </div>
                     <p>
                         Donde 𝜇 es la media y σ<sup>2</sup> es la varianza de la distribución.
+                        <br>
+                        Cálculo de la media:
+                        <div id="math-output">
+                            \( \mu \)
+                        </div>
+                        Cálculo de la varianza:
+                        <div id="math-output">
+                            \( \sigma^2 \)
+                        </div>
                     </p>
+<pre>
+ Código en Python
+<code class="python">from scipy.stats import norm
+mu = 0
+sigma = 1
+x = 1.5
+prob = norm.pdf(x, mu, sigma)
+</code></pre>
                 </td>
             </tr>
             <tr>
@@ -638,5 +715,8 @@
             </tr>
         </table>
     </div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
 </body>
 </html>
