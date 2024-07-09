@@ -127,6 +127,9 @@ header {
     overflow: auto;
     position: relative;
 }
+a:visited{
+    color: #000000;
+}
 .contents{
     flex: 1;
     padding: 0px 30px 10px 30px;
