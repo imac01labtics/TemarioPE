@@ -2,7 +2,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     let subtopics = document.querySelectorAll('.subtopic');
     subtopics.forEach((element) => {
-        element.addEventListener('click', moveBehind);
+        // Con iframe no if-else
+        if(element.id == "n"){
+        }else{
+            element.addEventListener('click', moveBehind);
+        }
     });
 
     let btn110 = document.getElementById('110');
