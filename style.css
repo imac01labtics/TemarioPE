@@ -87,3 +87,28 @@ pre{
     margin: 0%;
     border: 0px;
 }
+.overline {
+    position: relative;
+    display: inline-block;
+}
+.overline::before {
+    content: "";
+    position: absolute;
+    top: 0.25rem;
+    left: 0.1rem;
+    width: 100%;
+    border-top: 1px solid black;
+}
+.caret-above {
+    position: relative;
+    display: inline-block;
+}
+.caret-above::before {
+    content: "^";
+    position: absolute;
+    top: -0.15rem;
+    left: -0.3rem;
+    width: 100%;
+    text-align: center;
+    font-size: 1.8rem;
+}

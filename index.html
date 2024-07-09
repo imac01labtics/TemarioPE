@@ -13,8 +13,7 @@
     <!-- Incluir la fuente de KaTeX -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
     <!-- Include Highlight.js CSS for Monokai theme -->
-    <link rel="stylesheet"
-        href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/stackoverflow-light.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/stackoverflow-light.min.css">
 </head>
 
 <body>
@@ -847,6 +846,94 @@ prob = norm.pdf(x, mu, sigma)
                     <p>
                         Donde donde <i>d</i><sub>1</sub> y <i>d</i><sub>2</sub> son los grados de libertad de las dos muestras que se están
                         comparando.
+                    </p>
+                </td>
+            </tr>
+            <!-- #####################################  TEMA 5 ##################################### -->
+
+            <tr>
+                <th colspan="2">
+                    <h2>Tema 5: Regresión lineal</h2>
+                </th>
+            </tr>
+            <tr>
+                <th class="subtema-height">Subtema</th>
+                <th>Definición</th>
+            </tr>
+            <tr>
+                <td>5.1 Regresión y correlación</td>
+                <td>
+                    <p>
+                        La regresión y la correlación son técnicas estadísticas utilizadas para analizar la relación entre dos variables. La regresión se utiliza para predecir el valor de una variable en función de otra, mientras que la correlación mide la fuerza y la dirección de la relación entre dos variables.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>5.1.1 Diagrama de dispersión</td>
+                <td>
+                    <p>
+                        Un diagrama de dispersión es una representación gráfica que muestra la relación entre dos variables. Cada punto en el gráfico representa un par de valores de las dos variables. Se utiliza para identificar patrones, tendencias y posibles relaciones entre las variables.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>5.1.2 Regresión lineal simple</td>
+                <td>
+                    <p>
+                        La regresión lineal simple es un método para modelar la relación entre dos variables mediante una línea recta. La ecuación de la recta es:
+                    </p>
+                    <div id="math-output">
+                        \( y = \beta_0 + \beta_1 x \)
+                    </div>
+                    <p>
+                        Donde <i>y</i> es la variable dependiente, <i>x</i> es la variable independiente, β<sub>0</sub> es la ordenada al origen (intercepto), y β<sub>1</sub> es la pendiente de la recta. Se utiliza para predecir el valor de la variable dependiente en función de la variable independiente.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>5.1.3 Correlación</td>
+                <td>
+                    <p>
+                        La correlación mide la fuerza y la dirección de la relación lineal entre dos variables. El coeficiente de correlación <i>r</i> varía entre -1 y 1:
+                    </p>
+                    <div id="math-output">
+                        \( r = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum (x_i - \bar{x})^2 \sum (y_i - \bar{y})^2}} \)
+                    </div>
+                    <p>
+                        Donde <i>x<sub>i</sub></i> y <i>y<sub>i</sub></i> son los valores de las variables, y <i class="overline">x</i> y <i class="overline">y</i> son sus respectivas medias.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>5.1.4 Determinación y análisis de los coeficientes de correlación y de determinación</td>
+                <td>
+                    <ul>
+                        <li>
+                            <b>Coeficiente de correlación <i>r</i>: </b>Mide la relación lineal entre dos variables. Su valor absoluto indica la fuerza de la relación.
+                        </li>
+                        <li>
+                            <b>Coeficiente de determinación <i>R</i><sup>2</sup>: </b> Representa la proporción de la varianza en la variable dependiente que se puede explicar por la variable independiente en el modelo de regresión. Se calcula como:
+                            <div id="math-output">
+                                \( R^2 = \left( \frac{\sum (\hat{y}_i - \bar{y})^2}{\sum (y_i - \bar{y})^2} \right) \)
+                            </div>
+                        </li>
+                    </ul>
+                    <p>
+                        Donde <i class="caret-above">y<sub>i</sub></i> son los valores predichos y <i>y<sub>i</sub></i> son los valores observados. Un valor de <i>R</i><sup>2</sup> cercano a 1 indica que el modelo explica bien la variabilidad de los datos.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>5.1.5 Distribución normal bidimensional</td>
+                <td>
+                    <p>
+                        La distribución normal bidimensional describe la distribución conjunta de dos variables normalmente distribuidas. Está caracterizada por dos medias, dos varianzas y una covarianza. La función de densidad conjunta es:
+                    </p>
+                    <div id="math-output">
+                        \( f(x, y) = \frac{1}{2\pi \sigma_x \sigma_y \sqrt{1-\rho^2}} \exp \left( -\frac{1}{2(1-\rho^2)} \left[ \left( \frac{x-\mu_x}{\sigma_x} \right)^2 + \left( \frac{y-\mu_y}{\sigma_y} \right)^2 - \frac{2\rho (x-\mu_x)(y-\mu_y)}{\sigma_x \sigma_y} \right] \right) \)
+                    </div>
+                    <p>
+                        Donde <i>μ<sub>x</sub></i> y <i>μ<sub>y</sub></i> son las medias de <i>x</i> y <i>y</i>, <i>σ<sub>x</sub></i> y <i>σ<sub>y</sub></i> son las desviaciones estándar, y <i>ρ</i> es el coeficiente de correlación entre <i>x</i> y <i>y</i>. Se utiliza en la evaluación conjunta de dos variables continuas que siguen una distribución normal.
                     </p>
                 </td>
             </tr>
